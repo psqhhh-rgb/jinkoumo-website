@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进口家具改色膜 - 橱柜·衣柜·门板贴膜 | 进口膜网</title>
+    <meta name="description" content="进口膜网家具改色膜频道，提供进口家具翻新贴膜、橱柜改色膜、衣柜门板贴膜、PVC装饰膜，环保材质，仿真木纹/石纹/纯色，DIY施工。">
+    <meta name="keywords" content="家具改色膜,进口家具膜,橱柜贴膜,衣柜改色膜,门板贴膜,PVC装饰膜,家具翻新贴膜,进口装饰膜,家具美容贴膜,自粘家具膜">
+    <style>
+        :root { --primary: #1a365d; --accent: #e53e3e; --bg: #f7fafc; --text: #2d3748; --light: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "Microsoft YaHei", sans-serif; color: var(--text); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { width: 38px; height: 38px; background: linear-gradient(135deg, var(--primary), #2b6cb0); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 16px; }
+        .logo-text { font-size: 20px; font-weight: 800; color: var(--primary); }
+        .logo-text span { color: var(--accent); }
+        nav { display: flex; gap: 24px; align-items: center; }
+        nav a { font-size: 14px; font-weight: 500; color: var(--text); transition: color 0.2s; }
+        nav a:hover { color: var(--accent); }
+
+        .breadcrumb { background: var(--bg); padding: 12px 0; font-size: 13px; color: #a0aec0; }
+        .breadcrumb a { color: #718096; }
+        .breadcrumb span { margin: 0 6px; }
+
+        .page-hero { background: linear-gradient(135deg, #276749, #2f855a); color: #fff; padding: 60px 0; }
+        .page-hero h1 { font-size: 36px; font-weight: 900; margin-bottom: 12px; }
+        .page-hero p { font-size: 16px; color: rgba(255,255,255,0.85); max-width: 620px; }
+        .page-hero .tags { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+        .page-hero .tags span { background: rgba(255,255,255,0.18); padding: 5px 14px; border-radius: 16px; font-size: 13px; }
+
+        .section { padding: 60px 0; }
+        .section-dark { background: var(--bg); }
+
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header .tag { display: inline-block; background: linear-gradient(135deg, var(--accent), #ed8936); color: #fff; padding: 4px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+        .section-header h2 { font-size: 30px; font-weight: 800; color: var(--primary); margin-bottom: 10px; }
+        .section-header p { font-size: 15px; color: #718096; }
+
+        /* Product Grid */
+        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+        .p-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--light); transition: all 0.3s; }
+        .p-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .p-card-img { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 72px; position: relative; }
+        .pf-1 { background: linear-gradient(135deg, #f0fff4, #c6f6d5); }
+        .pf-2 { background: linear-gradient(135deg, #fffaf0, #feebc8); }
+        .pf-3 { background: linear-gradient(135deg, #ebf8ff, #bee3f8); }
+        .pf-4 { background: linear-gradient(135deg, #faf5ff, #e9d8fd); }
+        .pf-5 { background: linear-gradient(135deg, #fff5f5, #fed7d7); }
+        .pf-6 { background: linear-gradient(135deg, #fefcbf, #fef08a); }
+        .p-card-img .brand-badge { position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.5); color: #fff; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+        .p-card-body { padding: 20px; }
+        .p-card-body h3 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+        .p-card-body .p-desc { font-size: 13px; color: #718096; margin-bottom: 12px; line-height: 1.5; }
+        .p-specs { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+        .p-specs span { background: var(--bg); padding: 4px 10px; border-radius: 10px; font-size: 12px; color: #4a5568; }
+        .p-price { margin-bottom: 14px; }
+        .p-price .current { font-size: 20px; font-weight: 900; color: var(--accent); }
+        .p-price .unit { font-size: 12px; color: #718096; }
+        .p-card-footer { display: flex; gap: 8px; }
+        .p-card-footer .btn-sm { flex: 1; text-align: center; padding: 8px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+        .btn-detail { background: var(--bg); color: var(--primary); }
+        .btn-inquire { background: var(--accent); color: #fff; }
+
+        /* Scene Section */
+        .scene-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .scene-card { border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--light); }
+        .scene-card-img { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+        .sc-1 { background: linear-gradient(135deg, #f0fff4, #c6f6d5); }
+        .sc-2 { background: linear-gradient(135deg, #ebf8ff, #bee3f8); }
+        .sc-3 { background: linear-gradient(135deg, #fffaf0, #feebc8); }
+        .sc-4 { background: linear-gradient(135deg, #faf5ff, #e9d8fd); }
+        .scene-card-body { padding: 16px; }
+        .scene-card-body h4 { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+        .scene-card-body p { font-size: 12px; color: #718096; }
+
+        /* Guide */
+        .guide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .guide-card { background: #fff; border-radius: 14px; padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid var(--accent); }
+        .guide-card h4 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+        .guide-card p { font-size: 13px; color: #718096; line-height: 1.7; }
+
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, #276749, #2f855a); color: #fff; padding: 60px 0; text-align: center; }
+        .cta-section h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+        .cta-section p { font-size: 15px; color: rgba(255,255,255,0.8); margin-bottom: 24px; }
+        .btn-white { background: #fff; color: #276749; padding: 12px 32px; border-radius: 8px; font-weight: 700; font-size: 15px; display: inline-block; }
+
+        @media (max-width: 900px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+            .scene-grid { grid-template-columns: repeat(2, 1fr); }
+            .guide-grid { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+        @media (max-width: 600px) {
+            .product-grid { grid-template-columns: 1fr; }
+            .scene-grid { grid-template-columns: 1fr 1fr; }
+            .page-hero h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">M</div>
+            <div class="logo-text">进口<span>膜</span>网</div>
+        </a>
+        <nav>
+            <a href="/">首页</a>
+            <a href="products-auto.html">汽车膜</a>
+            <a href="#" style="color:var(--accent);font-weight:700;">家具改色膜</a>
+            <a href="#">建筑膜</a>
+            <a href="#">品牌大全</a>
+            <a href="#" style="background:var(--accent);color:#fff;padding:6px 16px;border-radius:6px;">免费询价</a>
+        </nav>
+    </div>
+</header>
+
+<div class="breadcrumb">
+    <div class="container"><a href="/">首页</a> <span>›</span> 家具改色膜</div>
+</div>
+
+<section class="page-hero">
+    <div class="container">
+        <h1>进口家具改色膜</h1>
+        <p>进口PVC装饰膜、家具翻新贴膜，仿真木纹/石纹/纯色/肤感系列，环保无异味，自粘施工，让旧家具焕发新生。</p>
+        <div class="tags">
+            <span>橱柜贴膜</span>
+            <span>衣柜改色</span>
+            <span>门板贴膜</span>
+            <span>自粘翻新</span>
+        </div>
+    </div>
+</section>
+
+<!-- Product List -->
+<section class="section">
+    <div class="container">
+        <div class="section-header" style="margin-bottom:36px;text-align:left;">
+            <h2 style="font-size:24px;">产品列表</h2>
+        </div>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="p-card">
+                <div class="p-card-img pf-1">
+                    🪵
+                    <span class="brand-badge">进口PVC</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>进口木纹装饰膜 · 橡木系列</h3>
+                    <p class="p-desc">高清仿真橡木纹理，触感细腻，防水防潮，适用于橱柜、衣柜、书桌贴面翻新。</p>
+                    <div class="p-specs">
+                        <span>厚度0.12mm</span>
+                        <span>自粘背胶</span>
+                        <span>环保无异味</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥18</span>
+                        <span class="unit">/米（宽1.22m）</span>
+                    </div>
+                    <div class="p-card-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="p-card">
+                <div class="p-card-img pf-2">
+                    🪨
+                    <span class="brand-badge">进口PVC</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>进口石纹装饰膜 · 大理石系列</h3>
+                    <p class="p-desc">仿真大理石纹路，立体感强，防水防油污，适合厨房台面、岛台、背景墙。</p>
+                    <div class="p-specs">
+                        <span>厚度0.15mm</span>
+                        <span>防油污涂层</span>
+                        <span>大理石纹</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥28</span>
+                        <span class="unit">/米（宽1.22m）</span>
+                    </div>
+                    <div class="p-card-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="p-card">
+                <div class="p-card-img pf-3">
+                    🎨
+                    <span class="brand-badge">进口哑光</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>进口纯色哑光膜 · 莫兰迪色系</h3>
+                    <p class="p-desc">哑光纯色系列，莫兰迪色系，肤感涂层，防刮耐磨，适合极简风格家具。</p>
+                    <div class="p-specs">
+                        <span>厚度0.10mm</span>
+                        <span>肤感涂层</span>
+                        <span>莫兰迪色</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥15</span>
+                        <span class="unit">/米（宽1.22m）</span>
+                    </div>
+                    <div class="p-card-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="p-card">
+                <div class="p-card-img pf-4">
+                    ✨
+                    <span class="brand-badge">进口高光</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>进口高光镜面膜 · 烤漆效果</h3>
+                    <p class="p-desc">高光镜面效果，仿真烤漆质感，易清洁，适合现代风格橱柜门板。</p>
+                    <div class="p-specs">
+                        <span>厚度0.15mm</span>
+                        <span>镜面高光</span>
+                        <span>易清洁</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥32</span>
+                        <span class="unit">/米（宽1.22m）</span>
+                    </div>
+                    <div class="p-card-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="p-card">
+                <div class="p-card-img pf-5">
+                    🖐️
+                    <span class="brand-badge">肤感系列</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>进口肤感膜 · 柔雾系列</h3>
+                    <p class="p-desc">细腻肤感触感，防指纹、耐油污，适合卧室家具、儿童房家具贴面。</p>
+                    <div class="p-specs">
+                        <span>厚度0.12mm</span>
+                        <span>防指纹</span>
+                        <span>儿童房适用</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥22</span>
+                        <span class="unit">/米（宽1.22m）</span>
+                    </div>
+                    <div class="p-card-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="p-card">
+                <div class="p-card-img pf-6">
+                    🔧
+                    <span class="brand-badge">DIY专用</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>家具翻新贴膜 DIY工具包</h3>
+                    <p class="p-desc">含贴膜+刮板+美工刀+说明书，新手也能轻松完成家具翻新，省下换家具钱。</p>
+                    <div class="p-specs">
+                        <span>全套工具</span>
+                        <span>视频教程</span>
+                        <span>新手友好</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥58</span>
+                        <span class="unit">/套（含3m膜）</span>
+                    </div>
+                    <div class="p-card-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Application Scenes -->
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <div class="tag">适用场景</div>
+            <h2>家具改色膜应用场景</h2>
+            <p>哪里都能贴，旧家具秒变新，成本仅需换家具的1/10</p>
+        </div>
+        <div class="scene-grid">
+            <div class="scene-card">
+                <div class="scene-card-img sc-1">🗄️</div>
+                <div class="scene-card-body">
+                    <h4>橱柜翻新</h4>
+                    <p>厨房橱柜门板贴膜，防水防油污，告别发黄老旧。</p>
+                </div>
+            </div>
+            <div class="scene-card">
+                <div class="scene-card-img sc-2">👔</div>
+                <div class="scene-card-body">
+                    <h4>衣柜/衣帽间</h4>
+                    <p>衣柜门板改色，纯色/木纹随心选，卧室焕然一新。</p>
+                </div>
+            </div>
+            <div class="scene-card">
+                <div class="scene-card-img sc-3">🚪</div>
+                <div class="scene-card-body">
+                    <h4>门板/移门</h4>
+                    <p>室内门、推拉门贴膜，低成本实现风格切换。</p>
+                </div>
+            </div>
+            <div class="scene-card">
+                <div class="scene-card-img sc-4">🛋️</div>
+                <div class="scene-card-body">
+                    <h4>书桌/背景墙</h4>
+                    <p>书桌贴面、电视背景墙装饰，DIY打造个性化空间。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Guide -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div class="tag">选购指南</div>
+            <h2>家具改色膜选购知识</h2>
+            <p>读懂这些，家具翻新不踩坑</p>
+        </div>
+        <div class="guide-grid">
+            <div class="guide-card">
+                <h4>📏 怎么算需要多少米膜？</h4>
+                <p>测量家具长宽，加10%损耗。例如橱柜门60cm×2m，约需1.5米膜（宽1.22m）。建议多买0.5米备用。</p>
+            </div>
+            <div class="guide-card">
+                <h4>🎨 木纹/石纹/纯色怎么选？</h4>
+                <p>北欧/日式选浅木纹；现代/轻奢选大理石纹；极简/奶油风选纯色哑光。先要小样确认颜色再下单。</p>
+            </div>
+            <div class="guide-card">
+                <h4>🔧 DIY施工难吗？</h4>
+                <p>平面施工简单，新手也能搞定。曲面/包边需要热风枪辅助。建议先在小件家具上练手。</p>
+            </div>
+            <div class="guide-card">
+                <h4>♻️ 环保性怎么看？</h4>
+                <p>进口PVC装饰膜应通过REACH、FDA等环保认证，无甲醛无重金属。施工后通风24小时即可正常使用。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>免费获取色卡小样</h2>
+        <p>寄送实物小样，看准颜色再下单，避免色差浪费</p>
+        <a href="#" class="btn-white">立即申请免费小样 →</a>
+    </div>
+</section>
+
+</body>
+</html>

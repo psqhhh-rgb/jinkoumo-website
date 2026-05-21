@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 进口膜.com 专业进口膜信息平台</title>
+    <meta name="description" content="了解进口膜.com，我们是谁、我们做什么、我们的核心优势。全国800+授权门店合作伙伴，覆盖50+进口品牌，提供汽车膜、建筑膜、家具膜、工业滤膜全品类信息。">
+    <meta name="keywords" content="关于进口膜网,进口膜平台介绍,进口膜品牌代理,汽车膜选购平台">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2b6cb0;
+            --accent: #e53e3e;
+            --accent-light: #f56565;
+            --gold: #d69e2e;
+            --bg: #f7fafc;
+            --white: #ffffff;
+            --text: #2d3748;
+            --text-light: #718096;
+            --light: #e2e8f0;
+            --success: #38a169;
+            --radius: 16px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 48px rgba(0,0,0,0.12);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { width: 42px; height: 42px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 18px; }
+        .logo-text { font-size: 22px; font-weight: 800; color: var(--primary); }
+        .logo-text span { color: var(--accent); }
+        nav { display: flex; gap: 28px; align-items: center; }
+        nav a { font-size: 15px; font-weight: 500; color: var(--text); transition: color 0.2s; }
+        nav a:hover { color: var(--accent); }
+        nav a.active { color: var(--accent); font-weight: 700; }
+        .nav-btn { background: var(--accent); color: #fff !important; padding: 8px 20px; border-radius: 6px; font-weight: 600; }
+        .nav-btn:hover { background: #c53030; }
+
+        /* Hero */
+        .about-hero { background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%); color: #fff; padding: 100px 0 80px; position: relative; overflow: hidden; }
+        .about-hero::before { content: ''; position: absolute; top: -30%; right: -15%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%); border-radius: 50%; }
+        .about-hero::after { content: ''; position: absolute; bottom: -20%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(214,158,46,0.1) 0%, transparent 70%); border-radius: 50%; }
+        .hero-content { position: relative; z-index: 1; text-align: center; max-width: 800px; margin: 0 auto; }
+        .hero-tag { display: inline-block; padding: 8px 24px; background: rgba(255,255,255,0.15); border-radius: 999px; font-size: 14px; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(255,255,255,0.2); }
+        .about-hero h1 { font-size: 48px; font-weight: 900; margin-bottom: 20px; line-height: 1.2; }
+        .about-hero p { font-size: 20px; opacity: 0.9; line-height: 1.8; }
+
+        /* Stats */
+        .stats-bar { background: var(--white); margin-top: -40px; position: relative; z-index: 10; }
+        .stats-inner { background: var(--white); border-radius: var(--radius); padding: 32px 40px; box-shadow: var(--shadow-lg); display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+        .stat-item { text-align: center; }
+        .stat-num { font-size: 40px; font-weight: 900; color: var(--primary); line-height: 1; }
+        .stat-num span { color: var(--accent); }
+        .stat-label { font-size: 14px; color: var(--text-light); margin-top: 8px; font-weight: 500; }
+
+        /* Section */
+        .section { padding: 80px 0; }
+        .section-header { text-align: center; margin-bottom: 56px; }
+        .section-tag { display: inline-block; padding: 6px 20px; background: #eff6ff; color: var(--primary-light); border-radius: 999px; font-size: 13px; font-weight: 700; margin-bottom: 16px; }
+        .section-header h2 { font-size: 36px; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+        .section-header p { font-size: 17px; color: var(--text-light); max-width: 600px; margin: 0 auto; }
+
+        /* Story */
+        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .story-text h3 { font-size: 28px; font-weight: 800; color: var(--primary); margin-bottom: 20px; }
+        .story-text p { font-size: 16px; color: var(--text-light); margin-bottom: 16px; line-height: 1.8; }
+        .story-text p:last-child { margin-bottom: 0; }
+        .story-highlight { background: linear-gradient(135deg, #fef3c7, #fde68a); border-left: 4px solid var(--gold); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 24px 0; }
+        .story-highlight p { color: var(--text) !important; font-weight: 600; margin-bottom: 0 !important; }
+        .story-img { background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: var(--radius); height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; position: relative; overflow: hidden; }
+        .story-img::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .story-img .big-quote { font-size: 120px; line-height: 1; opacity: 0.2; margin-bottom: -20px; }
+        .story-img .quote-text { font-size: 20px; text-align: center; padding: 0 40px; position: relative; z-index: 1; font-style: italic; }
+
+        /* Timeline */
+        .timeline { max-width: 900px; margin: 0 auto; position: relative; }
+        .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, var(--primary-light), var(--accent)); transform: translateX(-50%); }
+        .timeline-item { display: flex; gap: 48px; margin-bottom: 48px; position: relative; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-year { width: 100px; text-align: right; font-size: 24px; font-weight: 900; color: var(--primary); flex-shrink: 0; padding-top: 4px; }
+        .timeline-dot { width: 20px; height: 20px; background: var(--primary-light); border: 4px solid var(--white); border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%); box-shadow: 0 0 0 4px var(--primary-light); }
+        .timeline-content { flex: 1; background: var(--white); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+        .timeline-content h4 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+        .timeline-content p { font-size: 15px; color: var(--text-light); }
+
+        /* Values */
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .value-card { background: var(--white); border-radius: var(--radius); padding: 40px 32px; text-align: center; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; }
+        .value-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .value-icon { width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 36px; margin: 0 auto 24px; }
+        .value-card h4 { font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+        .value-card p { font-size: 15px; color: var(--text-light); line-height: 1.7; }
+
+        /* Team */
+        .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+        .team-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.2s; }
+        .team-card:hover { transform: translateY(-4px); }
+        .team-img { height: 200px; background: linear-gradient(135deg, var(--primary-light), var(--accent)); display: flex; align-items: center; justify-content: center; font-size: 60px; color: #fff; }
+        .team-info { padding: 24px; text-align: center; }
+        .team-info h4 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+        .team-info p { font-size: 14px; color: var(--text-light); margin-bottom: 8px; }
+        .team-tag { display: inline-block; padding: 4px 12px; background: #eff6ff; color: var(--primary-light); border-radius: 999px; font-size: 12px; font-weight: 600; }
+
+        /* Partners */
+        .partners-bar { background: var(--white); padding: 48px 0; }
+        .partners-logos { display: flex; gap: 48px; align-items: center; justify-content: center; flex-wrap: wrap; }
+        .partner-logo { padding: 12px 24px; background: var(--bg); border-radius: 8px; font-size: 18px; font-weight: 800; color: var(--text-light); transition: all 0.2s; }
+        .partner-logo:hover { background: var(--primary); color: #fff; }
+
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%); color: #fff; padding: 80px 0; text-align: center; }
+        .cta-section h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; }
+        .cta-section p { font-size: 18px; opacity: 0.9; margin-bottom: 32px; }
+        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .cta-btn { padding: 16px 40px; border-radius: 10px; font-size: 16px; font-weight: 700; text-decoration: none; transition: all 0.2s; }
+        .cta-primary { background: var(--accent); color: #fff; }
+        .cta-primary:hover { background: #c53030; }
+        .cta-secondary { background: rgba(255,255,255,0.15); color: #fff; border: 2px solid rgba(255,255,255,0.3); }
+        .cta-secondary:hover { background: rgba(255,255,255,0.25); }
+
+        /* Footer */
+        footer { background: var(--primary); color: #a0aec0; padding: 48px 0 32px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+        .footer-brand .logo-text { color: #fff; }
+        .footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 12px; }
+        .footer-col h4 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; padding: 0; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a { color: #a0aec0; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .footer-col ul li a:hover { color: #fff; }
+        .footer-bottom { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 13px; }
+
+        @media (max-width: 900px) {
+            .story-grid, .values-grid, .team-grid { grid-template-columns: 1fr; }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); }
+            .timeline::before { left: 20px; }
+            .timeline-item { flex-direction: column; padding-left: 50px; gap: 0; }
+            .timeline-year { text-align: left; }
+            .timeline-dot { left: 20px; }
+            nav { display: none; }
+            .about-hero h1 { font-size: 32px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            .stats-inner { grid-template-columns: 1fr; text-align: center; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">膜</div>
+            <div class="logo-text">进口<span>膜</span>.com</div>
+        </a>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="products-auto.html">汽车膜</a>
+            <a href="products-building.html">建筑膜</a>
+            <a href="products-furniture.html">家具膜</a>
+            <a href="products-industry.html">工业滤膜</a>
+            <a href="brands.html">品牌大全</a>
+            <a href="cases.html">案例展示</a>
+            <a href="knowledge-choose.html">百科知识</a>
+            <a href="contact.html">联系我们</a>
+            <a href="about.html" class="active nav-btn">关于我们</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="about-hero">
+    <div class="hero-content">
+        <div class="hero-tag">🏠 关于我们</div>
+        <h1>我们是谁？</h1>
+        <p>进口膜.com 是国内专业的进口膜信息聚合平台，<br>致力于帮助消费者找到最适合的进口膜产品和服务</p>
+    </div>
+</section>
+
+<!-- Stats -->
+<div class="container">
+    <div class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <div class="stat-num">50<span>+</span></div>
+                <div class="stat-label">合作进口品牌</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">800<span>+</span></div>
+                <div class="stat-label">授权施工门店</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">300<span>+</span></div>
+                <div class="stat-label">覆盖城市</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">10<span>万+</span></div>
+                <div class="stat-label">年服务客户</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Story -->
+<section class="section">
+    <div class="container">
+        <div class="story-grid">
+            <div class="story-text">
+                <h3>我们为什么做这件事？</h3>
+                <p>2018年，我们的创始团队在给爱车贴膜时发现：进口膜市场信息极度不对称——消费者不知道哪个品牌好、不了解参数含义、不懂得辨别真假、不知道哪家门店靠谱。</p>
+                <p>同样的困惑，也存在于建筑膜、家具改色膜、工业滤膜等其他领域。市场上充斥着假冒伪劣产品，消费者花了冤枉钱，却买不到真正优质的产品。</p>
+                <div class="story-highlight">
+                    <p>我们想改变这一切。</p>
+                </div>
+                <p>于是，进口膜.com 应运而生。我们希望通过专业、客观、中立的信息服务，让每一位消费者都能买到正品、选对产品、不花冤枉钱。</p>
+            </div>
+            <div class="story-img">
+                <div class="big-quote">"</div>
+                <div class="quote-text">让每一次贴膜，都成为明智的选择</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline -->
+<section class="section" style="background: var(--white);">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">发展历程</div>
+            <h2>我们的故事</h2>
+            <p>从0到1，每一步都走得扎实</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2018</div>
+                <div class="timeline-dot" style="top: 10px;"></div>
+                <div class="timeline-content">
+                    <h4>平台创立</h4>
+                    <p>进口膜.com 正式上线，首批收录10个进口品牌，建立初步的产品数据库和评测体系。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2019</div>
+                <div class="timeline-dot" style="top: 10px;"></div>
+                <div class="timeline-content">
+                    <h4>品牌拓展</h4>
+                    <p>合作进口品牌扩展至25个，签约首批授权门店100家，推出百科知识库和真假辨别指南。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-dot" style="top: 10px;"></div>
+                <div class="timeline-content">
+                    <h4>疫情突围</h4>
+                    <p>线下服务受阻，转型线上咨询+预约模式，推出无接触施工服务，用户满意度不降反升。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2021</div>
+                <div class="timeline-dot" style="top: 10px;"></div>
+                <div class="timeline-content">
+                    <h4>品类扩展</h4>
+                    <p>从汽车膜单一品类，扩展到建筑膜、家具改色膜、工业滤膜三大品类，完成全品类布局。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-dot" style="top: 10px;"></div>
+                <div class="timeline-content">
+                    <h4>规模突破</h4>
+                    <p>合作进口品牌突破50个，授权门店超过800家，覆盖全国300+城市，年服务客户突破10万。</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <div class="timeline-dot" style="top: 10px;"></div>
+                <div class="timeline-content">
+                    <h4>全新升级</h4>
+                    <p>平台全新改版上线，推出智能选膜助手、AI参数解读、案例中心等功能，服务体验全面升级。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">核心价值观</div>
+            <h2>我们坚持什么？</h2>
+            <p>这些原则，贯穿我们的一切工作</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🔍</div>
+                <h4>客观中立</h4>
+                <p>我们不推销任何品牌，只提供真实、客观的产品信息和专业建议，让消费者自己做决定。</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">✓</div>
+                <h4>正品保障</h4>
+                <p>所有合作门店均需品牌官方授权，我们帮助消费者验证真伪，确保每一分钱都花在正品上。</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🎓</div>
+                <h4>专业科普</h4>
+                <p>隔热膜参数复杂？施工标准看不懂？我们用通俗易懂的语言，让每个人都能成为"懂膜人"。</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <h4>服务闭环</h4>
+                <p>从咨询、选品、施工到售后，我们提供全程跟踪服务，问题第一时间响应，绝不让客户孤立无援。</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">💡</div>
+                <h4>持续更新</h4>
+                <p>产品技术不断迭代，品牌格局持续变化，我们保持高频更新，确保信息永远最新、最准确。</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">🛡️</div>
+                <h4>隐私保护</h4>
+                <p>您的联系方式和个人信息仅用于咨询服务，绝不泄露给任何第三方，尊重每一份信任。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team -->
+<section class="section" style="background: var(--white);">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">核心团队</div>
+            <h2>我们是一群什么样的人？</h2>
+            <p>热爱汽车、热爱科技、更热爱帮消费者解决问题</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-img">👨‍💼</div>
+                <div class="team-info">
+                    <h4>张明远</h4>
+                    <p>创始人 & CEO</p>
+                    <span class="team-tag">连续创业者</span>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-img">👩‍💻</div>
+                <div class="team-info">
+                    <h4>李婷</h4>
+                    <p>产品总监</p>
+                    <span class="team-tag">原汽车之家</span>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-img">👨‍🔬</div>
+                <div class="team-info">
+                    <h4>王志刚</h4>
+                    <p>技术总监</p>
+                    <span class="team-tag">清华计算机</span>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-img">👩‍🎨</div>
+                <div class="team-info">
+                    <h4>陈思</h4>
+                    <p>内容主编</p>
+                    <span class="team-tag">汽车媒体10年</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners -->
+<section class="partners-bar">
+    <div class="container">
+        <div class="section-header" style="margin-bottom: 32px;">
+            <h2 style="font-size: 24px;">合作品牌</h2>
+            <p style="font-size: 15px;">均为官方授权合作伙伴</p>
+        </div>
+        <div class="partners-logos">
+            <div class="partner-logo">3M</div>
+            <div class="partner-logo">V-KOOL 威固</div>
+            <div class="partner-logo">LLUMAR 龙膜</div>
+            <div class="partner-logo">Quantum 量子膜</div>
+            <div class="partner-logo">Solar Gard 圣佳</div>
+            <div class="partner-logo">XPEL</div>
+            <div class="partner-logo">Johnson 强生</div>
+            <div class="partner-logo">Hüper Optik 琥珀</div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>想了解更多？</h2>
+        <p>欢迎联系我们，专业顾问随时为您服务</p>
+        <div class="cta-btns">
+            <a href="contact.html" class="cta-btn cta-primary">联系我们</a>
+            <a href="cases.html" class="cta-btn cta-secondary">查看真实案例</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-text">进口<span>膜</span>.com</div>
+                <p>专业进口膜信息平台，覆盖汽车隔热膜、建筑玻璃膜、家具改色膜、工业滤膜四大品类，提供品牌库、参数对比、百科知识和案例展示。</p>
+            </div>
+            <div class="footer-col">
+                <h4>产品中心</h4>
+                <ul>
+                    <li><a href="products-auto.html">汽车隔热膜</a></li>
+                    <li><a href="products-building.html">建筑玻璃膜</a></li>
+                    <li><a href="products-furniture.html">家具改色膜</a></li>
+                    <li><a href="products-industry.html">工业滤膜</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>品牌大全</h4>
+                <ul>
+                    <li><a href="brand-3m.html">3M</a></li>
+                    <li><a href="brand-vkool.html">威固 V-KOOL</a></li>
+                    <li><a href="brand-llumar.html">龙膜 LLUMAR</a></li>
+                    <li><a href="brand-xpel.html">XPEL</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="about.html">关于进口膜.com</a></li>
+                    <li><a href="cases.html">案例展示</a></li>
+                    <li><a href="knowledge-choose.html">百科知识</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024-2026 进口膜.com 版权所有 | 沪ICP备XXXXXXXX号</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

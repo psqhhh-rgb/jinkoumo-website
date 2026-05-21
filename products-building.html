@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进口建筑膜 - 建筑隔热膜·防爆膜·装饰膜 | 进口膜网</title>
+    <meta name="description" content="进口建筑膜网，提供进口建筑隔热膜、建筑防爆膜、玻璃装饰膜、隐私膜，适用于写字楼、住宅、酒店、商场等场景，节能隔热、安全防爆、美化外观。">
+    <meta name="keywords" content="进口建筑膜,建筑隔热膜,建筑防爆膜,进口玻璃贴膜,建筑装饰膜,建筑隐私膜,隔热节能膜,玻璃防爆膜,3M建筑膜,圣佳建筑膜">
+    <style>
+        :root { --primary: #1a365d; --accent: #e53e3e; --bg: #f7fafc; --text: #2d3748; --light: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "Microsoft YaHei", sans-serif; color: var(--text); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { width: 38px; height: 38px; background: linear-gradient(135deg, var(--primary), #2b6cb0); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 16px; }
+        .logo-text { font-size: 20px; font-weight: 800; color: var(--primary); }
+        .logo-text span { color: var(--accent); }
+        nav { display: flex; gap: 24px; align-items: center; }
+        nav a { font-size: 14px; font-weight: 500; color: var(--text); transition: color 0.2s; }
+        nav a:hover { color: var(--accent); }
+
+        .breadcrumb { background: var(--bg); padding: 12px 0; font-size: 13px; color: #a0aec0; }
+        .breadcrumb a { color: #718096; }
+        .breadcrumb span { margin: 0 6px; }
+
+        .page-hero { background: linear-gradient(135deg, #2c5282, #2b6cb0); color: #fff; padding: 60px 0; }
+        .page-hero h1 { font-size: 36px; font-weight: 900; margin-bottom: 12px; }
+        .page-hero p { font-size: 16px; color: rgba(255,255,255,0.85); max-width: 640px; }
+        .page-hero .tags { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+        .page-hero .tags span { background: rgba(255,255,255,0.18); padding: 5px 14px; border-radius: 16px; font-size: 13px; }
+
+        .section { padding: 60px 0; }
+        .section-dark { background: var(--bg); }
+
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header .tag { display: inline-block; background: linear-gradient(135deg, var(--accent), #ed8936); color: #fff; padding: 4px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+        .section-header h2 { font-size: 30px; font-weight: 800; color: var(--primary); margin-bottom: 10px; }
+        .section-header p { font-size: 15px; color: #718096; }
+
+        /* Filter */
+        .filter-bar { background: #fff; border-bottom: 1px solid var(--light); padding: 16px 0; position: sticky; top: 64px; z-index: 50; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .filter-inner { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        .filter-item { padding: 7px 18px; border-radius: 20px; font-size: 13px; background: var(--bg); color: #4a5568; cursor: pointer; transition: all 0.2s; }
+        .filter-item.active { background: var(--primary); color: #fff; }
+        .filter-item:hover { border: 1px solid var(--primary); }
+
+        /* Product Grid */
+        .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .p-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--light); transition: all 0.3s; }
+        .p-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .p-card-img { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 72px; position: relative; }
+        .pb-1 { background: linear-gradient(135deg, #ebf8ff, #bee3f8); }
+        .pb-2 { background: linear-gradient(135deg, #fffaf0, #feebc8); }
+        .pb-3 { background: linear-gradient(135deg, #fff5f5, #fed7d7); }
+        .pb-4 { background: linear-gradient(135deg, #faf5ff, #e9d8fd); }
+        .pb-5 { background: linear-gradient(135deg, #f0fff4, #c6f6d5); }
+        .pb-6 { background: linear-gradient(135deg, #fffefc, #e6fffa); }
+        .p-card-img .badge { position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.5); color: #fff; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+        .p-card-body { padding: 20px; }
+        .p-card-body h3 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+        .p-desc { font-size: 13px; color: #718096; margin-bottom: 12px; line-height: 1.5; }
+        .p-specs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+        .p-specs span { background: var(--bg); padding: 4px 10px; border-radius: 10px; font-size: 12px; color: #4a5568; }
+        .p-price { margin-bottom: 14px; }
+        .p-price .current { font-size: 20px; font-weight: 900; color: var(--accent); }
+        .p-price .unit { font-size: 12px; color: #718096; }
+        .p-footer { display: flex; gap: 8px; }
+        .btn-sm { flex: 1; text-align: center; padding: 8px; border-radius: 8px; font-size: 13px; font-weight: 600; }
+        .btn-detail { background: var(--bg); color: var(--primary); }
+        .btn-inquire { background: var(--accent); color: #fff; }
+
+        /* Scene */
+        .scene-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .scene-card { border-radius: 14px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--light); }
+        .scene-card-img { height: 120px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+        .sc-a { background: linear-gradient(135deg, #ebf8ff, #bee3f8); }
+        .sc-b { background: linear-gradient(135deg, #fffaf0, #feebc8); }
+        .sc-c { background: linear-gradient(135deg, #fff5f5, #fed7d7); }
+        .sc-d { background: linear-gradient(135deg, #f0fff4, #c6f6d5); }
+        .scene-body { padding: 16px; }
+        .scene-body h4 { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+        .scene-body p { font-size: 12px; color: #718096; }
+
+        /* Benefit */
+        .benefit-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .benefit-card { background: #fff; border-radius: 14px; padding: 28px 20px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--light); }
+        .benefit-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin: 0 auto 14px; }
+        .bi-1 { background: #ebf8ff; }
+        .bi-2 { background: #f0fff4; }
+        .bi-3 { background: #fff5f5; }
+        .bi-4 { background: #faf5ff; }
+        .benefit-card h4 { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        .benefit-card p { font-size: 12px; color: #718096; line-height: 1.6; }
+
+        /* Guide */
+        .guide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .guide-card { background: #fff; border-radius: 14px; padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid var(--accent); }
+        .guide-card h4 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+        .guide-card p { font-size: 13px; color: #718096; line-height: 1.7; }
+
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, #2c5282, #2b6cb0); color: #fff; padding: 60px 0; text-align: center; }
+        .cta-section h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
+        .cta-section p { font-size: 15px; color: rgba(255,255,255,0.8); margin-bottom: 24px; }
+        .btn-white { background: #fff; color: #2c5282; padding: 12px 32px; border-radius: 8px; font-weight: 700; font-size: 15px; display: inline-block; }
+
+        @media (max-width: 900px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+            .scene-grid { grid-template-columns: repeat(2, 1fr); }
+            .benefit-grid { grid-template-columns: repeat(2, 1fr); }
+            .guide-grid { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+        @media (max-width: 600px) {
+            .product-grid { grid-template-columns: 1fr; }
+            .page-hero h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">M</div>
+            <div class="logo-text">进口<span>膜</span>网</div>
+        </a>
+        <nav>
+            <a href="/">首页</a>
+            <a href="products-auto.html">汽车膜</a>
+            <a href="products-furniture.html">家具改色膜</a>
+            <a href="products-building.html" style="color:var(--accent);font-weight:700;">建筑膜</a>
+            <a href="#">品牌大全</a>
+            <a href="#" style="background:var(--accent);color:#fff;padding:6px 16px;border-radius:6px;">免费询价</a>
+        </nav>
+    </div>
+</header>
+
+<div class="breadcrumb">
+    <div class="container"><a href="/">首页</a> <span>›</span> 建筑膜</div>
+</div>
+
+<section class="page-hero">
+    <div class="container">
+        <h1>进口建筑膜</h1>
+        <p>建筑隔热膜、建筑防爆膜、建筑装饰膜全品类，适用于玻璃幕墙、阳光房、幕墙窗、淋浴房等场景，节能隔热、安全防爆、美化建筑外观。</p>
+        <div class="tags">
+            <span>建筑隔热膜</span>
+            <span>建筑防爆膜</span>
+            <span>建筑装饰膜</span>
+            <span>隐私膜</span>
+        </div>
+    </div>
+</section>
+
+<!-- Filter -->
+<div class="filter-bar">
+    <div class="container filter-inner">
+        <div class="filter-item active">全部</div>
+        <div class="filter-item">建筑隔热膜</div>
+        <div class="filter-item">建筑防爆膜</div>
+        <div class="filter-item">建筑装饰膜</div>
+        <div class="filter-item">隐私膜</div>
+        <div class="filter-item">3M</div>
+        <div class="filter-item">圣佳</div>
+        <div class="filter-item">威固</div>
+    </div>
+</div>
+
+<!-- Products -->
+<section class="section">
+    <div class="container">
+        <div class="product-grid">
+            <!-- 1 -->
+            <div class="p-card">
+                <div class="p-card-img pb-1">
+                    ☀️
+                    <span class="badge">3M</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>3M 极景系列 建筑隔热膜</h3>
+                    <p class="p-desc">高性能建筑隔热膜，有效阻隔太阳热能，降低空调能耗30%，透光舒适，适用于幕墙玻璃和窗户。</p>
+                    <div class="p-specs">
+                        <span>隔热率 55%</span>
+                        <span>透光率 72%</span>
+                        <span>防紫外线 99%</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥88</span>
+                        <span class="unit">/平方米</span>
+                    </div>
+                    <div class="p-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="p-card">
+                <div class="p-card-img pb-2">
+                    🛡️
+                    <span class="badge">圣佳</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>圣佳 Armorcoat 建筑防爆膜</h3>
+                    <p class="p-desc">安全防爆膜，玻璃破碎时膜层粘附碎片，防止飞溅伤害，适用于幕墙、商场橱窗、银行等安全敏感场所。</p>
+                    <div class="p-specs">
+                        <span>防爆等级</span>
+                        <span>4mil厚度</span>
+                        <span>国标认证</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥128</span>
+                        <span class="unit">/平方米</span>
+                    </div>
+                    <div class="p-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="p-card">
+                <div class="p-card-img pb-3">
+                    🎨
+                    <span class="badge">进口装饰</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>进口建筑装饰膜 · 磨砂/渐变</h3>
+                    <p class="p-desc">磨砂质感/渐变条纹装饰膜，替代蚀刻玻璃，成本低、工期短、花色多样，适合隔断和幕墙点缀。</p>
+                    <div class="p-specs">
+                        <span>磨砂质感</span>
+                        <span>渐变条纹</span>
+                        <span>多种花色</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥58</span>
+                        <span class="unit">/平方米</span>
+                    </div>
+                    <div class="p-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="p-card">
+                <div class="p-card-img pb-4">
+                    🌙
+                    <span class="badge">威固</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>威固 建筑隔热膜 · 阳光房专用</h3>
+                    <p class="p-desc">专为阳光房和玻璃顶开发，强力阻隔红外热能，透光不刺眼，解决阳光房夏天暴晒冬天保温的双重痛点。</p>
+                    <div class="p-specs">
+                        <span>红外阻隔 95%</span>
+                        <span>阳光房专用</span>
+                        <span>散热均匀</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥108</span>
+                        <span class="unit">/平方米</span>
+                    </div>
+                    <div class="p-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="p-card">
+                <div class="p-card-img pb-5">
+                    🔒
+                    <span class="badge">防爆</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>建筑防爆膜 · 淋浴房专用</h3>
+                    <p class="p-desc">淋浴房钢化玻璃防爆膜，贴在玻璃背面，意外破碎时防止玻璃飞溅伤人，浴室安全必备。</p>
+                    <div class="p-specs">
+                        <span>4mil加厚</span>
+                        <span>淋浴房适用</span>
+                        <span>安全防爆</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥78</span>
+                        <span class="unit">/平方米</span>
+                    </div>
+                    <div class="p-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="p-card">
+                <div class="p-card-img pb-6">
+                    🌿
+                    <span class="badge">节能</span>
+                </div>
+                <div class="p-card-body">
+                    <h3>建筑节能膜 · LOW-E隔热系列</h3>
+                    <p class="p-desc">LOW-E低辐射建筑膜，冬天保温夏天隔热，显著降低建筑能耗，通过绿色建筑认证。</p>
+                    <div class="p-specs">
+                        <span>LOW-E</span>
+                        <span>冬暖夏凉</span>
+                        <span>绿色认证</span>
+                    </div>
+                    <div class="p-price">
+                        <span class="current">¥148</span>
+                        <span class="unit">/平方米</span>
+                    </div>
+                    <div class="p-footer">
+                        <a href="#" class="btn-sm btn-detail">查看详情</a>
+                        <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits -->
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <div class="tag">核心价值</div>
+            <h2>进口建筑膜能为建筑带来什么？</h2>
+        </div>
+        <div class="benefit-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon bi-1">🌡️</div>
+                <h4>隔热节能</h4>
+                <p>太阳热能阻隔率高达55%，空调能耗降低20-40%，绿色建筑标配。</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon bi-2">🛡️</div>
+                <h4>安全防爆</h4>
+                <p>玻璃意外破碎时膜层粘附碎片，防止飞溅伤人，幕墙安全必备。</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon bi-3">☀️</div>
+                <h4>防紫外线</h4>
+                <p>阻隔99%以上紫外线，保护室内家具、地板、展品不褪色老化。</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon bi-4">✨</div>
+                <h4>美化装饰</h4>
+                <p>磨砂渐变装饰膜，替代蚀刻玻璃，低成本实现多样化建筑外观。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Application Scenes -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <div class="tag">应用场景</div>
+            <h2>建筑膜适用场景</h2>
+            <p>从商业大厦到家庭阳光房，全面覆盖建筑玻璃贴膜需求</p>
+        </div>
+        <div class="scene-grid">
+            <div class="scene-card">
+                <div class="scene-card-img sc-a">🏢</div>
+                <div class="scene-body">
+                    <h4>写字楼 / 幕墙</h4>
+                    <p>玻璃幕墙隔热防晒，解决西晒问题，提升办公舒适度。</p>
+                </div>
+            </div>
+            <div class="scene-card">
+                <div class="scene-card-img sc-b">🏨</div>
+                <div class="scene-body">
+                    <h4>酒店 / 商场</h4>
+                    <p>商场橱窗防爆，酒店淋浴房安全，提升商业场所安全性。</p>
+                </div>
+            </div>
+            <div class="scene-card">
+                <div class="scene-card-img sc-c">🏠</div>
+                <div class="scene-body">
+                    <h4>阳光房 / 玻璃顶</h4>
+                    <p>阳光房隔热降温，冬暖夏凉，解决玻璃顶暴晒问题。</p>
+                </div>
+            </div>
+            <div class="scene-card">
+                <div class="scene-card-img sc-d">🚿</div>
+                <div class="scene-body">
+                    <h4>淋浴房 / 卫生间隔断</h4>
+                    <p>淋浴房钢化玻璃防爆膜，防患于未然，保障家人安全。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Guide -->
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <div class="tag">选购指南</div>
+            <h2>建筑膜选购知识</h2>
+        </div>
+        <div class="guide-grid">
+            <div class="guide-card">
+                <h4>📏 隔热膜参数怎么看？</h4>
+                <p>TSER（总太阳能阻隔率）是核心指标，越高隔热越好。建筑隔热膜通常在35-55%之间。注意区分"太阳热能阻隔率"和"红外线阻隔率"，前者才是真实隔热能力。</p>
+            </div>
+            <div class="guide-card">
+                <h4>🛡️ 防爆膜厚度怎么选？</h4>
+                <p>家庭淋浴房选4mil；商业幕墙选7-12mil。厚度越大防爆能力越强，但成本也越高。防爆膜必须配合专业施工，边缘处理不当会影响效果。</p>
+            </div>
+            <div class="guide-card">
+                <h4>💰 建筑膜多少钱一平？</h4>
+                <p>普通隔热膜：¥40-100/㎡；高端隔热膜：¥100-200/㎡；防爆膜：¥80-180/㎡；装饰膜：¥30-80/㎡。含施工费用另加¥20-60/㎡。</p>
+            </div>
+            <div class="guide-card">
+                <h4>🔧 施工有什么要求？</h4>
+                <p>建筑膜施工需要专业人员操作，需清洁玻璃、用专业液贴膜、赶水刮平。大型幕墙项目需要吊装配合。建议选择有品牌授权的施工服务商。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>免费获取建筑膜方案报价</h2>
+        <p>提供项目面积和场景，专业团队为您推荐最适合的进口建筑膜方案</p>
+        <a href="#" class="btn-white">立即咨询 →</a>
+    </div>
+</section>
+
+</body>
+</html>

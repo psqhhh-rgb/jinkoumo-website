@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进口汽车膜 - 品牌推荐·价格参考·选购指南 | 进口膜网</title>
+    <meta name="description" content="进口膜网汽车膜频道，提供3M、威固、龙膜等进口汽车膜品牌推荐，隔热膜、防爆膜、隐形车衣价格参考和选购指南。">
+    <meta name="keywords" content="进口汽车膜,进口隔热膜,进口防爆膜,进口隐形车衣,进口漆面保护膜,3M汽车膜,威固膜,龙膜,量子膜,汽车贴膜价格">
+    <style>
+        :root { --primary: #1a365d; --accent: #e53e3e; --bg: #f7fafc; --text: #2d3748; --light: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "Microsoft YaHei", sans-serif; color: var(--text); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { width: 38px; height: 38px; background: linear-gradient(135deg, var(--primary), #2b6cb0); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 16px; }
+        .logo-text { font-size: 20px; font-weight: 800; color: var(--primary); }
+        .logo-text span { color: var(--accent); }
+        nav { display: flex; gap: 24px; align-items: center; }
+        nav a { font-size: 14px; font-weight: 500; color: var(--text); transition: color 0.2s; }
+        nav a:hover { color: var(--accent); }
+
+        /* Breadcrumb */
+        .breadcrumb { background: var(--bg); padding: 12px 0; font-size: 13px; color: #a0aec0; }
+        .breadcrumb a { color: #718096; }
+        .breadcrumb span { margin: 0 6px; }
+
+        /* Page Hero */
+        .page-hero { background: linear-gradient(135deg, var(--primary), #2b6cb0); color: #fff; padding: 60px 0; }
+        .page-hero h1 { font-size: 36px; font-weight: 900; margin-bottom: 12px; }
+        .page-hero p { font-size: 16px; color: rgba(255,255,255,0.8); max-width: 600px; }
+        .page-hero .tags { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+        .page-hero .tags span { background: rgba(255,255,255,0.15); padding: 5px 14px; border-radius: 16px; font-size: 13px; }
+
+        /* Filter Bar */
+        .filter-bar { background: #fff; border-bottom: 1px solid var(--light); padding: 16px 0; position: sticky; top: 64px; z-index: 50; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .filter-inner { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+        .filter-item { padding: 7px 18px; border-radius: 20px; font-size: 13px; background: var(--bg); color: #4a5568; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; }
+        .filter-item.active { background: var(--primary); color: #fff; }
+        .filter-item:hover { border-color: var(--primary); }
+
+        /* Product List */
+        .section { padding: 50px 0; }
+        .product-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .p-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--light); transition: all 0.3s; }
+        .p-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .p-card-img { height: 200px; display: flex; align-items: center; justify-content: center; font-size: 72px; position: relative; }
+        .p-card-img .brand-badge { position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.5); color: #fff; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+        .p-auto-1 { background: linear-gradient(135deg, #ebf8ff, #bee3f8); }
+        .p-auto-2 { background: linear-gradient(135deg, #fffaf0, #feebc8); }
+        .p-auto-3 { background: linear-gradient(135deg, #f0fff4, #c6f6d5); }
+        .p-card-body { padding: 20px; }
+        .p-card-body h3 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+        .p-card-body .p-desc { font-size: 13px; color: #718096; margin-bottom: 12px; line-height: 1.5; }
+        .p-specs { display: flex; gap: 16px; margin-bottom: 14px; }
+        .p-spec { text-align: center; flex: 1; }
+        .p-spec-val { font-size: 15px; font-weight: 700; color: var(--accent); }
+        .p-spec-label { font-size: 11px; color: #a0aec0; }
+        .p-price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 14px; }
+        .p-price .current { font-size: 22px; font-weight: 900; color: var(--accent); }
+        .p-price .original { font-size: 13px; color: #a0aec0; text-decoration: line-through; }
+        .p-price .unit { font-size: 12px; color: #718096; }
+        .p-card-footer { display: flex; gap: 8px; }
+        .p-card-footer .btn-sm { flex: 1; text-align: center; padding: 8px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; }
+        .btn-detail { background: var(--bg); color: var(--primary); }
+        .btn-detail:hover { background: var(--light); }
+        .btn-inquire { background: var(--accent); color: #fff; }
+        .btn-inquire:hover { background: #c53030; }
+
+        /* Knowledge Sidebar */
+        .content-grid { display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
+        .sidebar { }
+        .sidebar-card { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--light); }
+        .sidebar-card h4 { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--bg); }
+        .sidebar-card a { display: block; font-size: 13px; color: #4a5568; padding: 7px 0; border-bottom: 1px solid var(--bg); transition: color 0.2s; }
+        .sidebar-card a:hover { color: var(--accent); }
+        .sidebar-card .hot { color: var(--accent); font-weight: 600; }
+
+        /* Guide Section */
+        .guide-section { background: var(--bg); }
+        .guide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .guide-card { background: #fff; border-radius: 14px; padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-left: 4px solid var(--accent); }
+        .guide-card h4 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+        .guide-card p { font-size: 13px; color: #718096; line-height: 1.7; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .product-list { grid-template-columns: repeat(2, 1fr); }
+            .content-grid { grid-template-columns: 1fr; }
+            .guide-grid { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+        @media (max-width: 600px) {
+            .product-list { grid-template-columns: 1fr; }
+            .page-hero h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">M</div>
+            <div class="logo-text">进口<span>膜</span>网</div>
+        </a>
+        <nav>
+            <a href="/">首页</a>
+            <a href="products-auto.html" style="color:var(--accent);font-weight:700;">产品中心</a>
+            <a href="#">品牌大全</a>
+            <a href="#">膜艺百科</a>
+            <a href="#">案例展示</a>
+            <a href="#">门店查询</a>
+            <a href="#" style="background:var(--accent);color:#fff;padding:6px 16px;border-radius:6px;">免费询价</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+    <div class="container">
+        <a href="/">首页</a> <span>›</span> <a href="#">产品中心</a> <span>›</span> 进口汽车膜
+    </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <h1>进口汽车膜</h1>
+        <p>精选全球一线进口汽车膜品牌，涵盖隔热膜、防爆膜、隐形车衣、漆面保护膜全品类，提供专业参数对比和价格参考。</p>
+        <div class="tags">
+            <span>隔热膜</span>
+            <span>防爆膜</span>
+            <span>隐形车衣</span>
+            <span>漆面保护膜</span>
+            <span>前挡膜</span>
+        </div>
+    </div>
+</section>
+
+<!-- Filter -->
+<div class="filter-bar">
+    <div class="container filter-inner">
+        <div class="filter-item active">全部</div>
+        <div class="filter-item">隔热膜</div>
+        <div class="filter-item">防爆膜</div>
+        <div class="filter-item">隐形车衣</div>
+        <div class="filter-item">前挡膜</div>
+        <div class="filter-item">侧后挡膜</div>
+        <div class="filter-item">3M</div>
+        <div class="filter-item">威固</div>
+        <div class="filter-item">龙膜</div>
+        <div class="filter-item">量子膜</div>
+    </div>
+</div>
+
+<!-- Product List + Sidebar -->
+<section class="section">
+    <div class="container content-grid">
+        <div>
+            <div class="product-list">
+                <!-- Product 1 -->
+                <div class="p-card">
+                    <div class="p-card-img p-auto-1">
+                        🌞
+                        <span class="brand-badge">3M</span>
+                    </div>
+                    <div class="p-card-body">
+                        <h3>3M 晶锐70 前挡隔热膜</h3>
+                        <p class="p-desc">多层光学微附隔热技术，高透光高隔热，不氧化不掉色，电子质保5年。</p>
+                        <div class="p-specs">
+                            <div class="p-spec"><div class="p-spec-val">72%</div><div class="p-spec-label">透光率</div></div>
+                            <div class="p-spec"><div class="p-spec-val">55%</div><div class="p-spec-label">隔热率</div></div>
+                            <div class="p-spec"><div class="p-spec-val">99%</div><div class="p-spec-label">UV阻隔</div></div>
+                        </div>
+                        <div class="p-price">
+                            <span class="current">¥1,680</span>
+                            <span class="unit">/卷</span>
+                        </div>
+                        <div class="p-card-footer">
+                            <a href="#" class="btn-sm btn-detail">查看详情</a>
+                            <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="p-card">
+                    <div class="p-card-img p-auto-2">
+                        🛡️
+                        <span class="brand-badge">威固</span>
+                    </div>
+                    <div class="p-card-body">
+                        <h3>威固 VK70 前挡膜</h3>
+                        <p class="p-desc">磁控溅射工艺，XIR技术，隔热性能行业标杆，豪车原厂配套首选。</p>
+                        <div class="p-specs">
+                            <div class="p-spec"><div class="p-spec-val">71%</div><div class="p-spec-label">透光率</div></div>
+                            <div class="p-spec"><div class="p-spec-val">59%</div><div class="p-spec-label">隔热率</div></div>
+                            <div class="p-spec"><div class="p-spec-val">99%</div><div class="p-spec-label">UV阻隔</div></div>
+                        </div>
+                        <div class="p-price">
+                            <span class="current">¥2,380</span>
+                            <span class="unit">/卷</span>
+                        </div>
+                        <div class="p-card-footer">
+                            <a href="#" class="btn-sm btn-detail">查看详情</a>
+                            <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="p-card">
+                    <div class="p-card-img p-auto-3">
+                        ✨
+                        <span class="brand-badge">XPEL</span>
+                    </div>
+                    <div class="p-card-body">
+                        <h3>XPEL LUX MATTE 哑光车衣</h3>
+                        <p class="p-desc">进口TPU基材，哑光质感，自修复涂层，质保10年，防剐蹭抗氧化。</p>
+                        <div class="p-specs">
+                            <div class="p-spec"><div class="p-spec-val">8.5mil</div><div class="p-spec-label">厚度</div></div>
+                            <div class="p-spec"><div class="p-spec-val">自修复</div><div class="p-spec-label">涂层</div></div>
+                            <div class="p-spec"><div class="p-spec-val">10年</div><div class="p-spec-label">质保</div></div>
+                        </div>
+                        <div class="p-price">
+                            <span class="current">¥8,800</span>
+                            <span class="unit">/全车</span>
+                        </div>
+                        <div class="p-card-footer">
+                            <a href="#" class="btn-sm btn-detail">查看详情</a>
+                            <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="p-card">
+                    <div class="p-card-img p-auto-1">
+                        🌓
+                        <span class="brand-badge">龙膜</span>
+                    </div>
+                    <div class="p-card-body">
+                        <h3>龙膜 后羿70 前挡膜</h3>
+                        <p class="p-desc">双层纳米陶瓷技术，不氧化不褪色，信号零屏蔽，适合新能源车。</p>
+                        <div class="p-specs">
+                            <div class="p-spec"><div class="p-spec-val">73%</div><div class="p-spec-label">透光率</div></div>
+                            <div class="p-spec"><div class="p-spec-val">52%</div><div class="p-spec-label">隔热率</div></div>
+                            <div class="p-spec"><div class="p-spec-val">99%</div><div class="p-spec-label">UV阻隔</div></div>
+                        </div>
+                        <div class="p-price">
+                            <span class="current">¥1,980</span>
+                            <span class="unit">/卷</span>
+                        </div>
+                        <div class="p-card-footer">
+                            <a href="#" class="btn-sm btn-detail">查看详情</a>
+                            <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="p-card">
+                    <div class="p-card-img p-auto-2">
+                        🔒
+                        <span class="brand-badge">量子膜</span>
+                    </div>
+                    <div class="p-card-body">
+                        <h3>量子膜 Diamond 70 前挡</h3>
+                        <p class="p-desc">钻石级多层磁控溅射，隔热性能卓越，低内反光，夜间行车更安全。</p>
+                        <div class="p-specs">
+                            <div class="p-spec"><div class="p-spec-val">70%</div><div class="p-spec-label">透光率</div></div>
+                            <div class="p-spec"><div class="p-spec-val">61%</div><div class="p-spec-label">隔热率</div></div>
+                            <div class="p-spec"><div class="p-spec-val">99%</div><div class="p-spec-label">UV阻隔</div></div>
+                        </div>
+                        <div class="p-price">
+                            <span class="current">¥2,180</span>
+                            <span class="unit">/卷</span>
+                        </div>
+                        <div class="p-card-footer">
+                            <a href="#" class="btn-sm btn-detail">查看详情</a>
+                            <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="p-card">
+                    <div class="p-card-img p-auto-3">
+                        🏷️
+                        <span class="brand-badge">圣佳</span>
+                    </div>
+                    <div class="p-card-body">
+                        <h3>圣佳 LR HEAT 系列 侧后挡</h3>
+                        <p class="p-desc">陶瓷隔热技术，多种透光率可选，隐私保护与隔热兼顾，性价比之选。</p>
+                        <div class="p-specs">
+                            <div class="p-spec"><div class="p-spec-val">15-50%</div><div class="p-spec-label">透光率</div></div>
+                            <div class="p-spec"><div class="p-spec-val">48%</div><div class="p-spec-label">隔热率</div></div>
+                            <div class="p-spec"><div class="p-spec-val">99%</div><div class="p-spec-label">UV阻隔</div></div>
+                        </div>
+                        <div class="p-price">
+                            <span class="current">¥980</span>
+                            <span class="unit">/卷</span>
+                        </div>
+                        <div class="p-card-footer">
+                            <a href="#" class="btn-sm btn-detail">查看详情</a>
+                            <a href="#" class="btn-sm btn-inquire">立即询价</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <h4>🔥 热门文章</h4>
+                <a href="#" class="hot">进口汽车膜哪个牌子好？2026实测排行榜</a>
+                <a href="#" class="hot">进口膜真假辨别5步法，新手必看</a>
+                <a href="#">前挡膜透光率70%是国标还是建议？</a>
+                <a href="#">新能源车贴膜，这些参数一定要注意</a>
+                <a href="#">隐形车衣价格差10倍，差在哪？</a>
+            </div>
+            <div class="sidebar-card">
+                <h4>📦 产品分类</h4>
+                <a href="#">进口汽车隔热膜</a>
+                <a href="#">进口汽车防爆膜</a>
+                <a href="#">进口隐形车衣/PPF</a>
+                <a href="#">进口漆面保护膜</a>
+                <a href="#">进口建筑隔热膜</a>
+                <a href="#">工业滤膜</a>
+            </div>
+            <div class="sidebar-card">
+                <h4>📞 快速咨询</h4>
+                <p style="font-size:13px;color:#718096;margin-bottom:12px;">专业顾问1对1推荐，免费获取方案报价</p>
+                <a href="tel:4000000000" class="btn-sm btn-inquire" style="display:block;text-align:center;text-decoration:none;">📞 400-000-0000</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Guide Section -->
+<section class="section guide-section">
+    <div class="container">
+        <div style="text-align:center;margin-bottom:40px;">
+            <h2 style="font-size:26px;font-weight:800;color:var(--primary);margin-bottom:10px;">选购指南</h2>
+            <p style="font-size:15px;color:#718096;">读懂这些，选膜不被坑</p>
+        </div>
+        <div class="guide-grid">
+            <div class="guide-card">
+                <h4>📏 参数解读：VLT / TSER / IRR</h4>
+                <p>VLT（可见光透射比）决定透光率，前挡必须≥70%才合规；TSER（总太阳能阻隔率）才是真实隔热能力的核心指标；IRR（红外线阻隔率）常被夸大宣传，需理性看待。</p>
+            </div>
+            <div class="guide-card">
+                <h4>🔍 真假进口膜辨别方法</h4>
+                <p>看防伪码（可官网验证）、查授权书（门店是否有品牌授权）、验电子质保（正品均有官方电子质保系统）、闻气味（劣质膜有明显异味）。</p>
+            </div>
+            <div class="guide-card">
+                <h4>🏪 施工环境有多重要？</h4>
+                <p>无尘车间是合格施工的基本要求，尘土会导致气泡和颗粒感。选择有认证技师的授权门店，施工质量和售后保障才有依靠。</p>
+            </div>
+            <div class="guide-card">
+                <h4>💰 2026年进口膜价格参考</h4>
+                <p>前挡隔热膜：¥800-3000；侧后挡套装：¥600-2000；隐形车衣全车：¥5000-18000；价格差异主要来自基材、涂层工艺和品牌溢价。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

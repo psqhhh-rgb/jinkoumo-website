@@ -1,0 +1,11 @@
+# robots.txt for jinkoumo.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.jinkoumo.com/sitemap.xml
+
+# Disallow admin or private paths (if any)
+# Disallow: /admin/
+# Disallow: /private/
