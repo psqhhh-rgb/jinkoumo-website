@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDI超纯水设备选型指南：板式vs卷式、进口品牌对比与工艺配置方案 | 进口膜网</title>
+    <meta name="description" content="EDI超纯水设备怎么选？一文讲透EDI模块类型（板式/卷式）、核心选型参数、进口品牌对比（IONPURE/西门子/威立雅），以及RO+EDI工艺配置方案。适用于半导体、制药、电力等行业超纯水系统设计选型参考。">
+    <meta name="keywords" content="EDI超纯水设备选型,EDI模块,电去离子设备,进口EDI模块,RO+EDI工艺,超纯水制备,IONPURE EDI,半导体超纯水设备">
+    <style>
+        :root { --primary: #1a365d; --accent: #e53e3e; --bg: #f7fafc; --text: #2d3748; --light: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "Microsoft YaHei", sans-serif; color: var(--text); line-height: 1.8; background: var(--bg); }
+        a { text-decoration: none; color: var(--primary); }
+        .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { font-size: 20px; font-weight: 800; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        nav { display: flex; gap: 20px; }
+        nav a { font-size: 14px; color: #4a5568; }
+        nav a:hover { color: var(--accent); }
+
+        .article-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+        .article-meta { display: flex; gap: 20px; padding: 28px 0 16px; font-size: 13px; color: #a0aec0; flex-wrap: wrap; }
+        .article-meta span { display: flex; align-items: center; gap: 6px; }
+        .article-body { background: #fff; border-radius: 16px; padding: 48px; margin: 0 0 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+
+        h1 { font-size: 30px; font-weight: 900; color: var(--primary); line-height: 1.3; margin-bottom: 16px; }
+        .lead { font-size: 17px; color: #4a5568; border-left: 4px solid var(--accent); padding-left: 16px; margin-bottom: 36px; line-height: 1.8; }
+
+        h2 { font-size: 22px; font-weight: 800; color: var(--primary); margin: 40px 0 16px; padding-top: 20px; border-top: 1px solid var(--light); }
+        h3 { font-size: 17px; font-weight: 700; color: var(--primary); margin: 24px 0 10px; }
+        p { font-size: 15px; color: #4a5568; margin-bottom: 14px; line-height: 1.9; }
+
+        .warn-box { background: #fff5f5; border-radius: 12px; padding: 24px; margin: 24px 0; border-left: 4px solid var(--accent); }
+        .warn-box p { color: #c53030; font-weight: 600; margin: 0; }
+        .tip-box { background: #f0fff4; border-radius: 12px; padding: 24px; margin: 24px 0; border-left: 4px solid #38a169; }
+        .tip-box p { color: #276749; font-weight: 600; margin: 0; }
+        .info-box { background: #ebf8ff; border-radius: 12px; padding: 24px; margin: 24px 0; border-left: 4px solid #2b6cb0; }
+        .info-box p { color: #2b6cb0; font-weight: 600; margin: 0; }
+
+        ul, ol { padding-left: 24px; margin-bottom: 14px; }
+        li { font-size: 15px; color: #4a5568; margin-bottom: 10px; line-height: 1.8; }
+        li strong { color: var(--primary); }
+
+        .ind-table { width: 100%; border-collapse: collapse; margin: 24px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .ind-table thead { background: var(--primary); color: #fff; }
+        .ind-table th { padding: 12px 16px; text-align: left; font-size: 14px; font-weight: 600; }
+        .ind-table td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid var(--light); }
+        .ind-table tbody tr:nth-child(even) { background: var(--bg); }
+
+        .tag-list { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 24px; }
+        .tag { background: var(--bg); color: #4a5568; padding: 5px 14px; border-radius: 16px; font-size: 13px; border: 1px solid var(--light); }
+
+        .related { background: #fff; border-radius: 16px; padding: 32px; margin: 40px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .related h3 { font-size: 18px; font-weight: 800; color: var(--primary); margin-bottom: 16px; }
+        .related-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .related-list a { background: var(--bg); padding: 14px 16px; border-radius: 10px; font-size: 14px; font-weight: 600; color: var(--primary); border: 1px solid var(--light); transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
+        .related-list a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+        .article-cta { background: linear-gradient(135deg, var(--primary), #2b6cb0); color: #fff; border-radius: 16px; padding: 36px; text-align: center; margin: 40px 0; }
+        .article-cta h3 { font-size: 22px; font-weight: 800; margin-bottom: 10px; color: #fff; }
+        .article-cta p { font-size: 14px; color: rgba(255,255,255,0.8); margin-bottom: 20px; }
+        .btn-white { background: #fff; color: var(--primary); padding: 12px 32px; border-radius: 8px; font-weight: 700; font-size: 15px; display: inline-block; }
+
+        footer { background: #1a202c; color: #a0aec0; padding: 40px 0; text-align: center; font-size: 13px; }
+
+        @media (max-width: 700px) {
+            .article-body { padding: 28px 20px; }
+            h1 { font-size: 24px; }
+            .ind-table th, .ind-table td { padding: 8px 10px; font-size: 12px; }
+            .related-list { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="logo">进口膜<span>.</span>网</a>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="products-auto.html">汽车膜</a>
+            <a href="products-building.html">建筑膜</a>
+            <a href="products-furniture.html">家具膜</a>
+            <a href="products-industry.html">工业膜</a>
+            <a href="brands.html">品牌</a>
+            <a href="knowledge-choose.html">百科</a>
+        </nav>
+    </div>
+</header>
+
+<div class="article-wrap">
+    <div class="article-meta">
+        <span>📅 2026-05-29</span>
+        <span>📂 工业滤膜</span>
+        <span>👁 阅读约 8 分钟</span>
+    </div>
+</div>
+
+<article class="article-body">
+    <h1>EDI超纯水设备选型指南：板式vs卷式模块如何选？进口品牌对比一文讲透</h1>
+    <p class="lead">EDI（电去离子）是制备 18.2 MΩ·cm 超纯水的核心技术环节，但不少工程师在面对板式/卷式模块选型、进口品牌对比、RO+EDI 工艺配置时容易纠结。本文从原理到参数、从品牌到价格，帮你建立一套清晰的 EDI 超纯水设备选型框架。</p>
+
+    <div class="info-box">
+        <p>💡 一句话科普：EDI = 电渗析（ED）+ 离子交换（IX），利用电场驱动离子迁移、在线再生树脂，无需酸碱化学再生，是目前超纯水制备的主流"绿色工艺"。</p>
+    </div>
+
+    <h2>一、EDI 在超纯水工艺链中的位置</h2>
+    <p>一套完整的超纯水制备系统通常由三级处理组成，EDI 位于最后一段——精处理脱盐段：</p>
+
+    <table class="ind-table">
+        <thead>
+            <tr><th>工艺段</th><th>核心设备</th><th>进水要求</th><th>产水水质</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>预处理</td><td>多介质过滤器 + 活性炭 + 软化器</td><td>原水（自来水/地下水）</td><td>SDI＜5，余氯＜0.1mg/L</td></tr>
+            <tr><td>一级 RO</td><td>反渗透膜（杜邦FilmTec / 东丽 / 海德能）</td><td>预处理出水</td><td>电导率 ≤ 20 μS/cm</td></tr>
+            <tr><td>二级 RO（可选）</td><td>反渗透膜</td><td>一级 RO 产水</td><td>电导率 ≤ 5 μS/cm</td></tr>
+            <tr><td style="background:#fffbe6;font-weight:700;">EDI 精处理</td><td style="background:#fffbe6;font-weight:700;">EDI 模块（IONPURE / 西门子 / 威立雅）</td><td style="background:#fffbe6;">电导率 ≤ 20 μS/cm</td><td style="background:#fffbe6;font-weight:700;">电阻率 ≥ 17 MΩ·cm（可达 18.2）</td></tr>
+            <tr><td>抛光混床（可选）</td><td>核级树脂混床</td><td>EDI 产水</td><td>电阻率 ≥ 18.2 MΩ·cm</td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <p>✅ 选型经验：对于大多数工业应用（电子清洗、制药纯化水、电厂锅炉补水），一级 RO + EDI 组合即可满足 15–18 MΩ·cm 需求。半导体晶圆级用水（18.2 MΩ·cm）通常需要二级 RO + EDI + 抛光混床。</p>
+    </div>
+
+    <h2>二、EDI 模块两大类型：板式 vs 卷式</h2>
+    <p>这是 EDI 选型中最核心的技术路线选择。板式（Plate-and-Frame）和卷式（Spiral-Wound）在设计原理、性能特点、适用场景上有显著差异——选错了等于把钱白花。</p>
+
+    <table class="ind-table">
+        <thead>
+            <tr><th>对比维度</th><th>板式 EDI</th><th>卷式 EDI</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>结构原理</td><td>阴阳离子交换膜交替排列，形成浓/淡室</td><td>阴阳膜卷绕成螺旋结构，类似RO膜元件</td></tr>
+            <tr><td>代表品牌</td><td>IONPURE（原GE）、威立雅</td><td>西门子 LaboStar / IONPURE 部分型号</td></tr>
+            <tr><td>单模块产水量</td><td>0.5–7.0 m³/h</td><td>0.1–0.5 m³/h（更小流量）</td></tr>
+            <tr><td>进水硬度容忍度</td><td>≤ 1.0 mg/L（以CaCO₃计）</td><td>≤ 0.5 mg/L（要求更严格）</td></tr>
+            <tr><td>产水电阻率</td><td>17–18.2 MΩ·cm</td><td>15–18 MΩ·cm</td></tr>
+            <tr><td>设备体积</td><td>较大，适合撬装式整体交付</td><td>紧凑，适合实验室/小流量场景</td></tr>
+            <tr><td>维护便利性</td><td>模块可拆解清洗，更换离子膜方便</td><td>整体更换，不可拆解</td></tr>
+            <tr><td>价格区间（参考）</td><td>单模块 4–15 万元</td><td>单模块 1–5 万元</td></tr>
+        </tbody>
+    </table>
+
+    <div class="warn-box">
+        <p>⚠️ 选型警告：进水硬度是 EDI 结垢的头号杀手。如果前端软化器或 RO 脱盐不充分，板式 EDI 浓室结垢后可以拆洗，但卷式 EDI 一旦结垢基本等于报废——维修成本远高于采购差价。</p>
+    </div>
+
+    <h2>三、进口 EDI 模块三大品牌对比</h2>
+    <p>目前国内市场上主流的进口 EDI 模块集中在三个品牌：IONPURE（原GE水处理）、西门子（Evoqua）、威立雅（Veolia / SUEZ）。三者各有优势领域，选对品牌能避免"兼容性事故"。</p>
+
+    <table class="ind-table">
+        <thead>
+            <tr><th>品牌</th><th>代表型号</th><th>单模块流量</th><th>产水水质</th><th>优势场景</th><th>参考价格</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>IONPURE</strong></td><td>LX-HI / LX-Z / VNX</td><td>0.44–7.0 m³/h</td><td>≥ 17 MΩ·cm</td><td>半导体、面板、大流量工业</td><td>5–15 万元/模块</td></tr>
+            <tr><td><strong>西门子 Evoqua</strong></td><td>IonPro / LaboStar</td><td>0.1–3.2 m³/h</td><td>15–18 MΩ·cm</td><td>实验室、医疗器械、小流量精密</td><td>3–10 万元/模块</td></tr>
+            <tr><td><strong>威立雅 SUEZ</strong></td><td>E-Cell系列</td><td>0.5–5.0 m³/h</td><td>≥ 16 MΩ·cm</td><td>电力锅炉补水、石化工艺用水</td><td>4–12 万元/模块</td></tr>
+            <tr><td><strong>国产参考</strong></td><td>蓝然 / 华电 / 中科</td><td>0.1–4.0 m³/h</td><td>10–16 MΩ·cm</td><td>一般工业、市政中水回用</td><td>1–5 万元/模块</td></tr>
+        </tbody>
+    </table>
+
+    <div class="info-box">
+        <p>📌 国产 EDI 进步很快，但电阻率 ≥ 17 MΩ·cm 的一致性仍不如进口品牌的成熟型号。如果你服务的客户是半导体前道制程、药厂注射用水等高标准场景，建议优先考虑 IONPURE LX-HI 系列——这是国内电子行业超纯水系统的"默认选项"。</p>
+    </div>
+
+    <h2>四、EDI 设备选型的 6 个核心参数</h2>
+    <p>拿到用户需求后，按以下顺序逐一确认，基本就能锁定 EDI 配置方案：</p>
+
+    <ol>
+        <li><strong>目标产水水质</strong> — 电阻率要求多少？15 MΩ·cm 还是 18.2 MΩ·cm？是否还需要后接抛光混床？</li>
+        <li><strong>设计产水量</strong> — 小时产水量（m³/h），决定了模块数量和并联/串联方式。</li>
+        <li><strong>进水水质（最关键）</strong> — EDI 进水必须是 RO 产水级别：电导率 ≤ 20 μS/cm（最好 ≤ 10），硬度 ≤ 1.0 mg/L，TOC ≤ 0.5 mg/L，余氯 = 0。</li>
+        <li><strong>运行温度</strong> — EDI 模块标准运行温度 5–35°C，超过 35°C 需要与厂家确认耐受性，超过 40°C 需要前置冷却。</li>
+        <li><strong>回收率要求</strong> — EDI 典型回收率 90–95%，浓水和极水需要回流或排放。高回收率场景需配置浓水循环泵。</li>
+        <li><strong>控制方式</strong> — 需要恒流还是恒压控制？是否要 PLC 自动调节？是否要远程监控？</li>
+    </ol>
+
+    <div class="warn-box">
+        <p>⚠️ 高频失误：不少方案在设计时只看了"产水量"和"水质"，忽略了 RO 产水的 TOC 和 CO₂。溶解性 CO₂ 会穿透 RO 进入 EDI，导致产水电阻率 "上不去"。如果原水碱度高、RO 前端未脱碳，EDI 产水很可能永远达不到 18 MΩ·cm。</p>
+    </div>
+
+    <h2>五、不同行业的典型 EDI 配置方案</h2>
+    <p>以下结合真实项目经验，给出四个行业的推荐 EDI 配置路径：</p>
+
+    <h3>1. 半导体 / 面板行业</h3>
+    <p><strong>推荐方案：</strong>原水箱 → MMF → ACF → 软化 → 一级 RO → 二级 RO → 脱气膜 → <strong>IONPURE LX-HI EDI</strong> → 抛光混床 → 终端超滤</p>
+    <p><strong>产水要求：</strong>电阻率 ≥ 18.2 MΩ·cm，TOC ≤ 1 ppb，颗粒 ≤ 0.05 μm</p>
+    <p><strong>配置要点：</strong>进口 EDI 模块几乎必选 IONPURE，后端加抛光混床作最终保障。脱气膜是去除 CO₂ 的关键——不要靠 EDI 去硬扛进水 CO₂。</p>
+
+    <h3>2. 制药纯化水 / 注射用水</h3>
+    <p><strong>推荐方案：</strong>原水箱 → MMF → ACF → 软化 → 一级 RO → <strong>威立雅 E-Cell EDI</strong> → 纯化水储罐 → 多效蒸馏（WFI）</p>
+    <p><strong>产水要求：</strong>电导率 ≤ 1.3 μS/cm（25°C），微生物 ≤ 100 CFU/mL（纯化水标准）</p>
+    <p><strong>配置要点：</strong>威立雅 E-Cell 在制药行业装机量大，GMP 验证资料齐全。注射用水（WFI）在 EDI 之后仍需蒸馏。</p>
+
+    <h3>3. 电厂锅炉补给水</h3>
+    <p><strong>推荐方案：</strong>原水箱 → MMF → ACF → 一级 RO → <strong>西门子 IonPro EDI</strong> → 除盐水箱</p>
+    <p><strong>产水要求：</strong>电导率 ≤ 0.2 μS/cm，SiO₂ ≤ 20 μg/L</p>
+    <p><strong>配置要点：</strong>电厂 EDI 系统通常流量大（50–200 m³/h），需要多模块并联，优先考虑运行稳定性和维护便利性。</p>
+
+    <h3>4. 实验室超纯水</h3>
+    <p><strong>推荐方案：</strong>自来水 → 预处理柱 → RO 膜 → <strong>西门子 LaboStar EDI</strong> → UV → 超滤 → 取水点</p>
+    <p><strong>产水要求：</strong>电阻率 18.2 MΩ·cm，TOC ≤ 5 ppb</p>
+    <p><strong>配置要点：</strong>实验室场景流量小（10–100 L/h），西门子 LaboStar 系列一体机是最常见的台式方案。</p>
+
+    <h2>六、EDI vs 混床：选择不只是"是否环保"</h2>
+    <p>很多项目在 EDI 和传统混床之间纠结。除了"不用酸碱更环保"这一层，还有一些真实世界的考量：</p>
+
+    <table class="ind-table">
+        <thead>
+            <tr><th>对比维度</th><th>EDI</th><th>传统混床</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>初始投资</td><td>高（模块单价 5–15 万）</td><td>低（树脂 + 罐体，几万元起）</td></tr>
+            <tr><td>运行成本</td><td>低（仅电耗 + 极少量维护）</td><td>高（酸碱再生药剂 + 人工）</td></tr>
+            <tr><td>回本周期</td><td>通常 2–3 年收回差价</td><td>—</td></tr>
+            <tr><td>水质稳定性</td><td>持续稳定，无再生衰减</td><td>随树脂饱和逐渐下降</td></tr>
+            <tr><td>环保合规</td><td>无酸碱废液排放</td><td>需处理酸碱再生废水</td></tr>
+            <tr><td>占地面积</td><td>紧凑，适合撬装</td><td>需配套酸碱储罐及再生系统</td></tr>
+            <tr><td>适用场景</td><td>连续运行、环保要求高</td><td>间歇运行、预算有限</td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <p>✅ 选型建议：如果日均运行 ≥ 16 小时、年运行 ≥ 300 天——选 EDI，2 年回本之后全是利润。如果是间歇性使用、月运行不到 15 天——混床的性价比仍然优于 EDI。</p>
+    </div>
+
+    <h2>七、EDI 设备安装与运维要点</h2>
+    <p>EDI 模块本身是一个"娇贵"的精密设备，运维不当是产水不达标的第二大原因（第一是进水水质差）。</p>
+
+    <ol>
+        <li><strong>严禁断水通电：</strong>EDI 模块必须在有水流的情况下才能通电加载直流电压。干烧几秒钟就可能导致离子膜永久损坏。</li>
+        <li><strong>开机顺序：</strong>先通水 → 确认流量正常 → 再通电；关机顺序：先断电 → 继续通水冲洗 5–10 分钟 → 再停水。</li>
+        <li><strong>定期 CIP 清洗：</strong>EDI 模块运行 6–12 个月后，建议进行一次在线化学清洗（酸洗除垢 + 碱洗除有机物），防止浓室结垢和微生物滋生。</li>
+        <li><strong>进水预处理不能省：</strong>RO 膜是 EDI 的"守护神"。RO 膜脱盐率下降了 1%，EDI 的工作负担可能增加 20–30%。维护好 RO 就是保护 EDI。</li>
+        <li><strong>备件策略：</strong>半导体工厂建议至少储备 1 个 EDI 备用模块（尤其单线配置），避免模块故障导致产线停产。</li>
+    </ol>
+
+    <div class="article-cta">
+        <h3>需要 EDI 超纯水设备选型方案？</h3>
+        <p>进口膜网对接 IONPURE、西门子、威立雅等进口 EDI 模块正品渠道，提供 RO+EDI 工艺设计和报价方案。</p>
+        <a href="contact.html" class="btn-white">立即咨询选型方案 →</a>
+    </div>
+</article>
+
+<div class="related">
+    <h3>📖 相关阅读</h3>
+    <div class="related-list">
+        <a href="knowledge-ultrapure-water-membrane.html">超纯水制备用什么膜？工艺链全解析</a>
+        <a href="knowledge-semiconductor-ultrapure-water.html">半导体行业超纯水膜选型详解</a>
+        <a href="knowledge-ro-membrane-performance.html">RO膜脱盐率怎么评估？性能指标全解读</a>
+        <a href="knowledge-pharma-water-membrane.html">制药纯化水系统膜选型指南</a>
+    </div>
+</div>
+
+<div class="tag-list">
+    <span class="tag">EDI超纯水设备选型</span>
+    <span class="tag">进口EDI模块</span>
+    <span class="tag">IONPURE</span>
+    <span class="tag">RO+EDI工艺</span>
+    <span class="tag">半导体超纯水</span>
+</div>
+
+<footer>
+    <p>&copy; 2026 进口膜网 jinkoumo.com — 专业进口膜全产业链平台 丨 汽车膜 · 建筑膜 · 家具膜 · 工业滤膜</p>
+</footer>
+
+</body>
+</html>

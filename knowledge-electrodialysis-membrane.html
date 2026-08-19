@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电渗析膜技术与双极膜电渗析选型指南 | 进口膜网</title>
+    <meta name="description" content="电渗析膜和反渗透膜怎么选？详解双极膜电渗析BMED原理、离子交换膜选型、废盐资源化与工业废水除盐应用，附进口电渗析膜品牌参数对比。">
+    <meta name="keywords" content="电渗析膜,双极膜电渗析,离子交换膜,电渗析除盐,废盐资源化膜,电渗析膜选型,进口电渗析膜,电渗析和反渗透区别">
+    <style>
+        :root { --primary: #1a365d; --accent: #2563eb; --bg: #f7fafc; --text: #2d3748; --light: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "Microsoft YaHei", sans-serif; color: var(--text); line-height: 1.8; background: var(--bg); }
+        a { text-decoration: none; color: var(--primary); }
+        .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { font-size: 20px; font-weight: 800; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        nav { display: flex; gap: 20px; }
+        nav a { font-size: 14px; color: #4a5568; }
+        nav a:hover { color: var(--accent); }
+
+        .article-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+        .article-meta { display: flex; gap: 20px; padding: 28px 0 16px; font-size: 13px; color: #a0aec0; flex-wrap: wrap; }
+        .article-meta span { display: flex; align-items: center; gap: 6px; }
+        .article-body { background: #fff; border-radius: 16px; padding: 48px; margin: 0 0 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+
+        h1 { font-size: 30px; font-weight: 900; color: var(--primary); line-height: 1.3; margin-bottom: 16px; }
+        .lead { font-size: 17px; color: #4a5568; border-left: 4px solid var(--accent); padding-left: 16px; margin-bottom: 36px; line-height: 1.8; }
+
+        h2 { font-size: 22px; font-weight: 800; color: var(--primary); margin: 40px 0 16px; padding-top: 20px; border-top: 1px solid var(--light); }
+        h3 { font-size: 17px; font-weight: 700; color: var(--primary); margin: 24px 0 10px; }
+        p { font-size: 15px; color: #4a5568; margin-bottom: 14px; line-height: 1.9; }
+
+        .tip-box { background: #f0fff4; border-radius: 12px; padding: 24px; margin: 24px 0; border-left: 4px solid #38a169; }
+        .tip-box p { color: #276749; font-weight: 600; margin: 0; }
+        .tip-box ul { margin-top: 10px; }
+        .tip-box li { color: #276749; font-size: 14px; }
+        .warn-box { background: #fff5f5; border-radius: 12px; padding: 24px; margin: 24px 0; border-left: 4px solid #e53e3e; }
+        .warn-box p { color: #c53030; font-weight: 600; margin: 0; }
+        .warn-box ul { margin-top: 10px; }
+        .warn-box li { color: #c53030; font-size: 14px; }
+        .info-box { background: #ebf8ff; border-radius: 12px; padding: 24px; margin: 24px 0; border-left: 4px solid #2b6cb0; }
+        .info-box p { color: #2b6cb0; font-weight: 600; margin: 0; }
+        .info-box ul { margin-top: 10px; }
+        .info-box li { color: #2b6cb0; font-size: 14px; }
+
+        ul, ol { padding-left: 24px; margin-bottom: 14px; }
+        li { font-size: 15px; color: #4a5568; margin-bottom: 10px; line-height: 1.8; }
+        li strong { color: var(--primary); }
+
+        .ind-table { width: 100%; border-collapse: collapse; margin: 24px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .ind-table thead { background: var(--primary); color: #fff; }
+        .ind-table th { padding: 12px 16px; text-align: left; font-size: 14px; font-weight: 600; }
+        .ind-table td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid var(--light); }
+        .ind-table tbody tr:nth-child(even) { background: var(--bg); }
+        .ind-table tbody tr:hover td { background: #ebf8ff; }
+
+        .tag-list { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0 24px; }
+        .tag { background: var(--bg); color: #4a5568; padding: 5px 14px; border-radius: 16px; font-size: 13px; border: 1px solid var(--light); }
+
+        .related { background: #fff; border-radius: 16px; padding: 32px; margin: 40px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .related h3 { font-size: 18px; font-weight: 800; color: var(--primary); margin-bottom: 16px; }
+        .related-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .related-list a { background: var(--bg); padding: 14px 16px; border-radius: 10px; font-size: 14px; font-weight: 600; color: var(--primary); border: 1px solid var(--light); transition: all 0.2s; display: flex; align-items: center; gap: 8px; }
+        .related-list a:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+        .price-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+        .price-card { background: var(--bg); border-radius: 12px; padding: 24px; border: 1px solid var(--light); }
+        .price-card h4 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+        .price-card .price-tag { font-size: 28px; font-weight: 900; color: var(--accent); }
+        .price-card .unit { font-size: 14px; color: #a0aec0; }
+
+        .pro-con { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+        .pro-card { background: #f0fff4; border-radius: 12px; padding: 24px; border: 1px solid #c6f6d5; }
+        .pro-card h4 { font-size: 16px; font-weight: 700; color: #276749; margin-bottom: 12px; }
+        .con-card { background: #fff5f5; border-radius: 12px; padding: 24px; border: 1px solid #fed7d7; }
+        .con-card h4 { font-size: 16px; font-weight: 700; color: #c53030; margin-bottom: 12px; }
+
+        footer { background: #1a202c; color: #a0aec0; padding: 40px 0; text-align: center; font-size: 13px; }
+        footer a { color: #e2e8f0; }
+
+        @media (max-width: 700px) {
+            .article-body { padding: 28px 20px; }
+            h1 { font-size: 24px; }
+            .price-compare, .pro-con { grid-template-columns: 1fr; }
+            .ind-table th, .ind-table td { padding: 8px 10px; font-size: 12px; }
+            .related-list { grid-template-columns: 1fr; }
+            nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">进口<span>膜</span>网</div>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="products-auto.html">汽车膜</a>
+            <a href="products-building.html">建筑膜</a>
+            <a href="products-furniture.html">家具膜</a>
+            <a href="products-industry.html">工业膜</a>
+            <a href="brands.html">品牌</a>
+            <a href="knowledge-choose.html">百科</a>
+        </nav>
+    </div>
+</header>
+
+<div class="article-wrap">
+    <div class="article-meta">
+        <span>📅 2026-07-08</span>
+        <span>👤 进口膜网 · 膜艺百科</span>
+        <span>⏱️ 阅读约 8 分钟</span>
+    </div>
+
+    <div class="article-body">
+        <div class="tag-list">
+            <span class="tag">电渗析膜</span>
+            <span class="tag">双极膜电渗析</span>
+            <span class="tag">离子交换膜</span>
+            <span class="tag">废盐资源化</span>
+            <span class="tag">进口电渗析膜</span>
+        </div>
+
+        <h1>电渗析膜技术与双极膜电渗析：工业废水零排放与废盐资源化选型指南</h1>
+
+        <p class="lead">
+            <strong>核心结论：</strong>在工业废水零排放和废盐资源化赛道，<strong>电渗析膜（ED）</strong>与<strong>双极膜电渗析（BMED）</strong>正成为反渗透（RO）之后最关键的膜技术组合。电渗析适合中高盐度废水浓缩与选择性除盐，能耗仅为RO的30%-50%；双极膜电渗析则能将无机盐直接转化为酸和碱，实现"盐→酸+碱"的闭环资源化。2026年中国工业废水零排放膜市场规模突破920亿元，电渗析及离子交换膜增速达22%，已超越传统膜分离成为高盐废水处理的新增长极。
+        </p>
+
+        <h2>一、电渗析膜是什么？它如何工作？</h2>
+
+        <p><strong>电渗析膜</strong>是一类具有离子选择透过性的离子交换膜，在直流电场驱动下，让溶液中的阴、阳离子定向迁移，从而实现脱盐、浓缩或分盐。一套典型的电渗析膜堆由阳离子交换膜（CM）、阴离子交换膜（AM）和隔板交替堆叠组成，形成浓水室和淡水室。</p>
+
+        <p>与反渗透依靠压力驱动水分子透过膜不同，电渗析是依靠电场驱动离子移动，因此：</p>
+        <ul>
+            <li>水通量损耗极低，浓缩液不会大幅稀释</li>
+            <li>对高盐废水（TDS 5,000-50,000 mg/L）的浓缩效率优于RO</li>
+            <li>对硬度、有机物等污染敏感性低于RO，预处理要求更简单</li>
+        </ul>
+
+        <div class="info-box">
+            <p>📌 关键数据</p>
+            <ul>
+                <li>电渗析脱盐能耗：约 <strong>0.5-2.5 kWh/m³</strong>（取决于进水盐度和去除率）</li>
+                <li>RO脱盐能耗：约 <strong>1.5-4.5 kWh/m³</strong>，且随盐度升高呈指数上升</li>
+                <li>双极膜电渗析制酸碱综合能耗：约 <strong>3-6 kWh/kg 当量</strong>，较传统酸碱采购+运输可降本30%-50%</li>
+                <li>2026年全球离子交换膜市场规模约 <strong>68亿美元</strong>，中国占比提升至31%</li>
+            </ul>
+        </div>
+
+        <h2>二、电渗析 vs 反渗透：8维度对比</h2>
+
+        <p>很多用户在规划高盐废水处理时，会纠结"电渗析和反渗透区别"到底有多大。下面从核心维度进行硬核对比：</p>
+
+        <table class="ind-table">
+            <thead>
+                <tr>
+                    <th>维度</th>
+                    <th>电渗析（ED/EDR）</th>
+                    <th>反渗透（RO）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>驱动力</strong></td>
+                    <td>直流电场（离子迁移）</td>
+                    <td>压力（水分子渗透）</td>
+                </tr>
+                <tr>
+                    <td><strong>适用TDS</strong></td>
+                    <td>500-80,000 mg/L（高盐浓缩优势）</td>
+                    <td>50-15,000 mg/L（低盐脱盐优势）</td>
+                </tr>
+                <tr>
+                    <td><strong>浓缩极限</strong></td>
+                    <td>可达180,000-220,000 mg/L（接近饱和）</td>
+                    <td>通常40,000-60,000 mg/L（受渗透压限制）</td>
+                </tr>
+                <tr>
+                    <td><strong>能耗趋势</strong></td>
+                    <td>盐度越高，相对RO越省</td>
+                    <td>盐度越高，能耗和压力急剧上升</td>
+                </tr>
+                <tr>
+                    <td><strong>预处理要求</strong></td>
+                    <td>中等，需控制硬度、余氯</td>
+                    <td>高，需严格控SDI、余氯、有机物</td>
+                </tr>
+                <tr>
+                    <td><strong>膜污染类型</strong></td>
+                    <td>结垢、有机物附着为主</td>
+                    <td>结垢、胶体污染、生物污染为主</td>
+                </tr>
+                <tr>
+                    <td><strong>出水水质</strong></td>
+                    <td>一般可达TDS 200-1,000 mg/L</td>
+                    <td>可达TDS 10-100 mg/L</td>
+                </tr>
+                <tr>
+                    <td><strong>最佳定位</strong></td>
+                    <td>高盐浓缩、分盐、选择性脱盐</td>
+                    <td>高品质产水、低盐脱盐</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <p>💡 选型建议</p>
+            <ul>
+                <li><strong>低盐高纯水：</strong>优先RO+EDI</li>
+                <li><strong>高盐废水浓缩：</strong>优先电渗析，RO作为后端精制产水</li>
+                <li><strong>废盐资源化：</strong>优先双极膜电渗析BMED</li>
+                <li><strong>省钱组合：</strong>EDR（电渗析）前置浓缩 + RO深度脱盐 + MVR结晶，整体能耗可比纯RO降低20%-35%</li>
+            </ul>
+        </div>
+
+        <h2>三、离子交换膜三大类型：阳膜、阴膜、双极膜</h2>
+
+        <p>电渗析膜选型本质上就是<strong>离子交换膜选型</strong>。根据膜结构和功能，可分为三类：</p>
+
+        <table class="ind-table">
+            <thead>
+                <tr>
+                    <th>膜类型</th>
+                    <th>功能基团</th>
+                    <th>选择透过离子</th>
+                    <th>典型应用</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>阳离子交换膜（CM/CEM）</strong></td>
+                    <td>磺酸基（-SO₃H）</td>
+                    <td>阳离子（Na⁺、Ca²⁺、Mg²⁺等）</td>
+                    <td>电渗析脱盐、浓缩</td>
+                </tr>
+                <tr>
+                    <td><strong>阴离子交换膜（AM/AEM）</strong></td>
+                    <td>季铵基（-N⁺(CH₃)₃）</td>
+                    <td>阴离子（Cl⁻、SO₄²⁻、NO₃⁻等）</td>
+                    <td>电渗析脱盐、浓缩</td>
+                </tr>
+                <tr>
+                    <td><strong>双极膜（BPM）</strong></td>
+                    <td>阳膜层+阴膜层复合</td>
+                    <td>H⁺和OH⁻（水解离生成）</td>
+                    <td>废盐制酸碱、有机酸回收</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>1. 均相膜 vs 异相膜</h3>
+        <p>离子交换膜按制造工艺分为<strong>均相膜</strong>和<strong>异相膜</strong>。均相膜离子交换基团与高分子骨架结合均匀，电阻低、选择透过性高（>90%），适合高价值分离；异相膜成本较低，机械强度高，但电阻和能耗略高，适合大通量预处理。</p>
+
+        <h3>2. 双极膜电渗析（BMED）的"魔术"</h3>
+        <p>双极膜由阳离子交换层和阴离子交换层压合而成，在反向电压作用下，膜中间界面水分子解离为H⁺和OH⁻。将双极膜与阴/阳膜组合，就能将盐水（NaCl）分解为盐酸（HCl）和氢氧化钠（NaOH），实现<strong>废盐资源化</strong>。</p>
+
+        <div class="info-box">
+            <p>🔬 双极膜电渗析典型反应</p>
+            <ul>
+                <li><strong>NaCl → HCl + NaOH</strong>（能耗约4-5 kWh/kg当量）</li>
+                <li><strong>Na₂SO₄ → H₂SO₄ + 2NaOH</strong>（适合硫酸盐废水）</li>
+                <li><strong>有机酸铵盐 → 有机酸 + NH₃</strong>（制药、发酵行业回收有机酸）</li>
+            </ul>
+        </div>
+
+        <h2>四、进口电渗析膜品牌参数对比</h2>
+
+        <p>电渗析膜选型不能只看价格，膜的<strong>选择透过率、面电阻、机械强度、化学稳定性</strong>决定了系统能耗和寿命。以下是主流进口电渗析膜品牌对比：</p>
+
+        <table class="ind-table">
+            <thead>
+                <tr>
+                    <th>品牌</th>
+                    <th>国家</th>
+                    <th>代表膜类型</th>
+                    <th>选择透过率</th>
+                    <th>面电阻 Ω·cm²</th>
+                    <th>价格区间</th>
+                    <th>核心优势</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>DuPont 杜邦</strong></td>
+                    <td>美国</td>
+                    <td>均相阳/阴膜、双极膜</td>
+                    <td>92%-96%</td>
+                    <td>1.5-3.0</td>
+                    <td>¥350-600/㎡</td>
+                    <td>化学稳定性强，双极膜性能领先</td>
+                </tr>
+                <tr>
+                    <td><strong>PCCell</strong></td>
+                    <td>德国</td>
+                    <td>均相膜、双极膜</td>
+                    <td>93%-97%</td>
+                    <td>1.2-2.5</td>
+                    <td>¥400-700/㎡</td>
+                    <td>欧洲BMED标杆，寿命长达5-8年</td>
+                </tr>
+                <tr>
+                    <td><strong>ASTOM 旭化成</strong></td>
+                    <td>日本</td>
+                    <td>均相阳/阴膜、单价选择性膜</td>
+                    <td>94%-98%</td>
+                    <td>1.0-2.8</td>
+                    <td>¥380-650/㎡</td>
+                    <td>单价选择性膜，适合一价/二价离子分离</td>
+                </tr>
+                <tr>
+                    <td><strong>FUJIFILM</strong></td>
+                    <td>日本</td>
+                    <td>双极膜、均相膜</td>
+                    <td>90%-95%</td>
+                    <td>2.0-4.0</td>
+                    <td>¥320-550/㎡</td>
+                    <td>双极膜水解离电压低，适合制酸碱</td>
+                </tr>
+                <tr>
+                    <td><strong>Membranes International</strong></td>
+                    <td>美国</td>
+                    <td>异相/均相膜</td>
+                    <td>88%-93%</td>
+                    <td>2.5-5.0</td>
+                    <td>¥200-400/㎡</td>
+                    <td>性价比高，适合大规模预处理</td>
+                </tr>
+                <tr>
+                    <td><strong>山东天维/杭州埃尔</strong></td>
+                    <td>中国</td>
+                    <td>均相膜、双极膜</td>
+                    <td>85%-92%</td>
+                    <td>2.5-5.5</td>
+                    <td>¥120-280/㎡</td>
+                    <td>国产替代主力，交货快，售后响应好</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>五、六大应用场景选型决策</h2>
+
+        <p>不同工业场景对电渗析膜的要求差异很大。以下是2026年最热的六大应用场景选型参考：</p>
+
+        <table class="ind-table">
+            <thead>
+                <tr>
+                    <th>应用场景</th>
+                    <th>核心目标</th>
+                    <th>推荐膜组合</th>
+                    <th>关键参数</th>
+                    <th>参考品牌</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>高盐废水浓缩</strong></td>
+                    <td>将TDS 5,000-30,000 mg/L浓缩至150,000+ mg/L</td>
+                    <td>均相阳膜+阴膜EDR</td>
+                    <td>浓缩比、能耗、抗结垢</td>
+                    <td>DuPont、ASTOM</td>
+                </tr>
+                <tr>
+                    <td><strong>废盐资源化（制酸碱）</strong></td>
+                    <td>NaCl/Na₂SO₄转化为HCl/NaOH</td>
+                    <td>双极膜+阳膜+阴膜BMED</td>
+                    <td>水解离电压、电流效率</td>
+                    <td>PCCell、FUJIFILM</td>
+                </tr>
+                <tr>
+                    <td><strong>电镀废水重金属回收</strong></td>
+                    <td>浓缩Ni²⁺、Cu²⁺、Cr⁶⁺等重金属</td>
+                    <td>单价选择性阳膜+阴膜</td>
+                    <td>重金属截留率、耐氧化性</td>
+                    <td>ASTOM、DuPont</td>
+                </tr>
+                <tr>
+                    <td><strong>食品饮料脱盐</strong></td>
+                    <td>脱盐同时保留风味物质</td>
+                    <td>均相ED膜</td>
+                    <td>卫生级认证、VOC迁移</td>
+                    <td>PCCell、Membranes International</td>
+                </tr>
+                <tr>
+                    <td><strong>制药有机酸回收</strong></td>
+                    <td>从发酵液中回收乳酸、柠檬酸等</td>
+                    <td>BMED双极膜</td>
+                    <td>酸纯度、回收率</td>
+                    <td>PCCell、FUJIFILM</td>
+                </tr>
+                <tr>
+                    <td><strong>海水淡化预处理</strong></td>
+                    <td>降低硬度、降低RO负荷</td>
+                    <td>EDR（倒极电渗析）</td>
+                    <td>水回收率、抗生物污染</td>
+                    <td>DuPont、Membranes International</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>六、电渗析膜选型三大陷阱</h2>
+
+        <div class="warn-box">
+            <p>⚠️ 陷阱一：把电渗析当"低价RO"用</p>
+            <ul>
+                <li>电渗析出水水质通常不如RO，不适合直接作为终端纯水工艺</li>
+                <li>若目标是产水TDS＜100 mg/L，应选RO+EDI，而非单独电渗析</li>
+            </ul>
+        </div>
+
+        <div class="warn-box">
+            <p>⚠️ 陷阱二：只看膜价格，忽略系统能耗</p>
+            <ul>
+                <li>电渗析膜成本通常只占系统总投资的15%-25%</li>
+                <li>选择透过率低1%，能耗可能增加5%-10%，三年电费差远超膜价差</li>
+            </ul>
+        </div>
+
+        <div class="warn-box">
+            <p>⚠️ 陷阱三：双极膜电渗析"什么盐都能做酸碱"</p>
+            <ul>
+                <li>BMED对进水盐浓度、硬度、有机物有严格要求，通常需预处理</li>
+                <li>Ca²⁺/Mg²⁺高时易在膜面结垢，必须先软化或采用EDR预处理</li>
+            </ul>
+        </div>
+
+        <h2>七、五步选型决策法</h2>
+
+        <ol>
+            <li><strong>明确目标：</strong>是脱盐产水、浓缩减盐，还是废盐制酸碱？不同目标对应不同膜堆配置。</li>
+            <li><strong>摸清水质：</strong>TDS、Cl⁻/SO₄²⁻比例、硬度、COD、重金属含量，决定膜类型和预处理深度。</li>
+            <li><strong>确定浓缩比/产酸碱浓度：</strong>ED通常浓缩比3-10倍；BMED产酸/碱浓度一般可达1-2 N，需确认下游回用需求。</li>
+            <li><strong>选择膜类型：</strong>高价值分离选均相膜；大通量预处理选异相膜；废盐资源化必选双极膜。</li>
+            <li><strong>核算全生命周期成本：</strong>膜寿命、能耗、清洗频次、酸碱（或排污）收益，综合计算3-5年TCO。</li>
+        </ol>
+
+        <div class="tip-box">
+            <p>💡 省钱组合方案</p>
+            <ul>
+                <li><strong>EDR + RO + MVR：</strong>高盐废水先EDR浓缩，RO深度脱盐，MVR结晶，整体能耗比纯RO+MVR低25%-35%</li>
+                <li><strong>进口均相膜+国产双极膜：</strong>核心分离段用进口均相膜，BMED制酸碱段用国产成熟双极膜，可省20%-30%膜投资</li>
+                <li><strong>倒极电渗析（EDR）替代常规ED：</strong>通过定期倒极减轻结垢，清洗周期延长2-3倍，运维成本降低30%</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="related">
+        <h3>相关阅读</h3>
+        <div class="related-list">
+            <a href="knowledge-membrane-separation-principle.html">📘 膜分离技术原理：RO/NF/UF/MF/EDI详解</a>
+            <a href="knowledge-ro-vs-nf.html">📘 反渗透膜和纳滤膜的区别与选型</a>
+            <a href="knowledge-zero-discharge-uhp-ro.html">📘 高盐废水零排放膜技术与DTRO应用</a>
+            <a href="knowledge-industrial-membrane-brands.html">📘 进口滤膜品牌排行榜与选型建议</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 进口膜网 jinkoumo.com · 专注进口汽车膜、建筑膜、家具膜、工业滤膜全品类</p>
+        <p>本站所有内容仅供参考，具体产品参数以品牌官方说明为准。</p>
+    </div>
+</footer>
+
+</body>
+</html>
